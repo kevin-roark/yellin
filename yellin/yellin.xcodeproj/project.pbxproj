@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB201A62188E301200059C5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201A61188E301200059C5D /* Foundation.framework */; };
+		FB201A64188E301200059C5D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201A63188E301200059C5D /* CoreGraphics.framework */; };
+		FB201A66188E301200059C5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201A65188E301200059C5D /* UIKit.framework */; };
+		FB201A6C188E301200059C5D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB201A6A188E301200059C5D /* InfoPlist.strings */; };
+		FB201A6E188E301200059C5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201A6D188E301200059C5D /* main.m */; };
+		FB201A72188E301200059C5D /* YellinAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201A71188E301200059C5D /* YellinAppDelegate.m */; };
+		FB201A75188E301200059C5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB201A73188E301200059C5D /* Main.storyboard */; };
+		FB201A7D188E301200059C5D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB201A7C188E301200059C5D /* Images.xcassets */; };
+		FB201A84188E301200059C5D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201A83188E301200059C5D /* XCTest.framework */; };
+		FB201A85188E301200059C5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201A61188E301200059C5D /* Foundation.framework */; };
+		FB201A86188E301200059C5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201A65188E301200059C5D /* UIKit.framework */; };
+		FB201A8E188E301200059C5D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB201A8C188E301200059C5D /* InfoPlist.strings */; };
+		FB201A90188E301200059C5D /* yellinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201A8F188E301200059C5D /* yellinTests.m */; };
+		FB201A9E188E37E400059C5D /* YellinMakeYellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201A9D188E37E400059C5D /* YellinMakeYellViewController.m */; };
+		FB201AA1188E37FE00059C5D /* YellinMouthSoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AA0188E37FE00059C5D /* YellinMouthSoundsViewController.m */; };
+		FB201AA6188E412F00059C5D /* YellinMakeYellView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AA5188E412F00059C5D /* YellinMakeYellView.m */; };
+		FB201AA9188E414300059C5D /* YellinMouthYellView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AA8188E414300059C5D /* YellinMouthYellView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB201A87188E301200059C5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB201A56188E301200059C5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB201A5D188E301200059C5D;
+			remoteInfo = yellin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB201A5E188E301200059C5D /* yellin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yellin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB201A61188E301200059C5D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB201A63188E301200059C5D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FB201A65188E301200059C5D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB201A69188E301200059C5D /* yellin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "yellin-Info.plist"; sourceTree = "<group>"; };
+		FB201A6B188E301200059C5D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB201A6D188E301200059C5D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB201A6F188E301200059C5D /* yellin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "yellin-Prefix.pch"; sourceTree = "<group>"; };
+		FB201A70188E301200059C5D /* YellinAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YellinAppDelegate.h; sourceTree = "<group>"; };
+		FB201A71188E301200059C5D /* YellinAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YellinAppDelegate.m; sourceTree = "<group>"; };
+		FB201A74188E301200059C5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB201A7C188E301200059C5D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FB201A82188E301200059C5D /* yellinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yellinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB201A83188E301200059C5D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FB201A8B188E301200059C5D /* yellinTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "yellinTests-Info.plist"; sourceTree = "<group>"; };
+		FB201A8D188E301200059C5D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB201A8F188E301200059C5D /* yellinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = yellinTests.m; sourceTree = "<group>"; };
+		FB201A9C188E37E400059C5D /* YellinMakeYellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinMakeYellViewController.h; sourceTree = "<group>"; };
+		FB201A9D188E37E400059C5D /* YellinMakeYellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinMakeYellViewController.m; sourceTree = "<group>"; };
+		FB201A9F188E37FE00059C5D /* YellinMouthSoundsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinMouthSoundsViewController.h; sourceTree = "<group>"; };
+		FB201AA0188E37FE00059C5D /* YellinMouthSoundsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinMouthSoundsViewController.m; sourceTree = "<group>"; };
+		FB201AA4188E412F00059C5D /* YellinMakeYellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinMakeYellView.h; sourceTree = "<group>"; };
+		FB201AA5188E412F00059C5D /* YellinMakeYellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinMakeYellView.m; sourceTree = "<group>"; };
+		FB201AA7188E414300059C5D /* YellinMouthYellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinMouthYellView.h; sourceTree = "<group>"; };
+		FB201AA8188E414300059C5D /* YellinMouthYellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinMouthYellView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB201A5B188E301200059C5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB201A64188E301200059C5D /* CoreGraphics.framework in Frameworks */,
+				FB201A66188E301200059C5D /* UIKit.framework in Frameworks */,
+				FB201A62188E301200059C5D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB201A7F188E301200059C5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB201A84188E301200059C5D /* XCTest.framework in Frameworks */,
+				FB201A86188E301200059C5D /* UIKit.framework in Frameworks */,
+				FB201A85188E301200059C5D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB201A55188E301200059C5D = {
+			isa = PBXGroup;
+			children = (
+				FB201A67188E301200059C5D /* yellin */,
+				FB201A89188E301200059C5D /* yellinTests */,
+				FB201A60188E301200059C5D /* Frameworks */,
+				FB201A5F188E301200059C5D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB201A5F188E301200059C5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB201A5E188E301200059C5D /* yellin.app */,
+				FB201A82188E301200059C5D /* yellinTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB201A60188E301200059C5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB201A61188E301200059C5D /* Foundation.framework */,
+				FB201A63188E301200059C5D /* CoreGraphics.framework */,
+				FB201A65188E301200059C5D /* UIKit.framework */,
+				FB201A83188E301200059C5D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB201A67188E301200059C5D /* yellin */ = {
+			isa = PBXGroup;
+			children = (
+				FB201AA3188E411200059C5D /* TabViews */,
+				FB201AA2188E410100059C5D /* TabControllers */,
+				FB201A70188E301200059C5D /* YellinAppDelegate.h */,
+				FB201A71188E301200059C5D /* YellinAppDelegate.m */,
+				FB201A73188E301200059C5D /* Main.storyboard */,
+				FB201A7C188E301200059C5D /* Images.xcassets */,
+				FB201A68188E301200059C5D /* Supporting Files */,
+			);
+			path = yellin;
+			sourceTree = "<group>";
+		};
+		FB201A68188E301200059C5D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB201A69188E301200059C5D /* yellin-Info.plist */,
+				FB201A6A188E301200059C5D /* InfoPlist.strings */,
+				FB201A6D188E301200059C5D /* main.m */,
+				FB201A6F188E301200059C5D /* yellin-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FB201A89188E301200059C5D /* yellinTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB201A8F188E301200059C5D /* yellinTests.m */,
+				FB201A8A188E301200059C5D /* Supporting Files */,
+			);
+			path = yellinTests;
+			sourceTree = "<group>";
+		};
+		FB201A8A188E301200059C5D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB201A8B188E301200059C5D /* yellinTests-Info.plist */,
+				FB201A8C188E301200059C5D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FB201AA2188E410100059C5D /* TabControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB201A9C188E37E400059C5D /* YellinMakeYellViewController.h */,
+				FB201A9D188E37E400059C5D /* YellinMakeYellViewController.m */,
+				FB201A9F188E37FE00059C5D /* YellinMouthSoundsViewController.h */,
+				FB201AA0188E37FE00059C5D /* YellinMouthSoundsViewController.m */,
+			);
+			name = TabControllers;
+			sourceTree = "<group>";
+		};
+		FB201AA3188E411200059C5D /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				FB201AA4188E412F00059C5D /* YellinMakeYellView.h */,
+				FB201AA5188E412F00059C5D /* YellinMakeYellView.m */,
+				FB201AA7188E414300059C5D /* YellinMouthYellView.h */,
+				FB201AA8188E414300059C5D /* YellinMouthYellView.m */,
+			);
+			name = TabViews;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB201A5D188E301200059C5D /* yellin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB201A93188E301200059C5D /* Build configuration list for PBXNativeTarget "yellin" */;
+			buildPhases = (
+				FB201A5A188E301200059C5D /* Sources */,
+				FB201A5B188E301200059C5D /* Frameworks */,
+				FB201A5C188E301200059C5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = yellin;
+			productName = yellin;
+			productReference = FB201A5E188E301200059C5D /* yellin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB201A81188E301200059C5D /* yellinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB201A96188E301200059C5D /* Build configuration list for PBXNativeTarget "yellinTests" */;
+			buildPhases = (
+				FB201A7E188E301200059C5D /* Sources */,
+				FB201A7F188E301200059C5D /* Frameworks */,
+				FB201A80188E301200059C5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB201A88188E301200059C5D /* PBXTargetDependency */,
+			);
+			name = yellinTests;
+			productName = yellinTests;
+			productReference = FB201A82188E301200059C5D /* yellinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB201A56188E301200059C5D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Yellin;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Kevin Roark";
+				TargetAttributes = {
+					FB201A81188E301200059C5D = {
+						TestTargetID = FB201A5D188E301200059C5D;
+					};
+				};
+			};
+			buildConfigurationList = FB201A59188E301200059C5D /* Build configuration list for PBXProject "yellin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB201A55188E301200059C5D;
+			productRefGroup = FB201A5F188E301200059C5D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB201A5D188E301200059C5D /* yellin */,
+				FB201A81188E301200059C5D /* yellinTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB201A5C188E301200059C5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB201A7D188E301200059C5D /* Images.xcassets in Resources */,
+				FB201A6C188E301200059C5D /* InfoPlist.strings in Resources */,
+				FB201A75188E301200059C5D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB201A80188E301200059C5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB201A8E188E301200059C5D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB201A5A188E301200059C5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB201A6E188E301200059C5D /* main.m in Sources */,
+				FB201AA1188E37FE00059C5D /* YellinMouthSoundsViewController.m in Sources */,
+				FB201AA6188E412F00059C5D /* YellinMakeYellView.m in Sources */,
+				FB201A9E188E37E400059C5D /* YellinMakeYellViewController.m in Sources */,
+				FB201A72188E301200059C5D /* YellinAppDelegate.m in Sources */,
+				FB201AA9188E414300059C5D /* YellinMouthYellView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB201A7E188E301200059C5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB201A90188E301200059C5D /* yellinTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB201A88188E301200059C5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB201A5D188E301200059C5D /* yellin */;
+			targetProxy = FB201A87188E301200059C5D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB201A6A188E301200059C5D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB201A6B188E301200059C5D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FB201A73188E301200059C5D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB201A74188E301200059C5D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FB201A8C188E301200059C5D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB201A8D188E301200059C5D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB201A91188E301200059C5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FB201A92188E301200059C5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB201A94188E301200059C5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "yellin/yellin-Prefix.pch";
+				INFOPLIST_FILE = "yellin/yellin-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FB201A95188E301200059C5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "yellin/yellin-Prefix.pch";
+				INFOPLIST_FILE = "yellin/yellin-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FB201A97188E301200059C5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/yellin.app/yellin";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "yellin/yellin-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "yellinTests/yellinTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FB201A98188E301200059C5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/yellin.app/yellin";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "yellin/yellin-Prefix.pch";
+				INFOPLIST_FILE = "yellinTests/yellinTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB201A59188E301200059C5D /* Build configuration list for PBXProject "yellin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB201A91188E301200059C5D /* Debug */,
+				FB201A92188E301200059C5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB201A93188E301200059C5D /* Build configuration list for PBXNativeTarget "yellin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB201A94188E301200059C5D /* Debug */,
+				FB201A95188E301200059C5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FB201A96188E301200059C5D /* Build configuration list for PBXNativeTarget "yellinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB201A97188E301200059C5D /* Debug */,
+				FB201A98188E301200059C5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB201A56188E301200059C5D /* Project object */;
+}
