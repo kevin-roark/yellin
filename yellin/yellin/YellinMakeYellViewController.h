@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import "YellinConstants.h"
 #import "YellinMakeYellView.h"
 
-@interface YellinMakeYellViewController : UIViewController
+@interface YellinMakeYellViewController : UIViewController<AVAudioPlayerDelegate, AVAudioRecorderDelegate>
+
+@property (nonatomic, strong) AVAudioRecorder *recorder;
+@property (nonatomic, strong) AVAudioPlayer *player;
 
 @end

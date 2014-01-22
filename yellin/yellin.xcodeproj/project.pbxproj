@@ -24,6 +24,7 @@
 		FB201AA1188E37FE00059C5D /* YellinMouthSoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AA0188E37FE00059C5D /* YellinMouthSoundsViewController.m */; };
 		FB201AA6188E412F00059C5D /* YellinMakeYellView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AA5188E412F00059C5D /* YellinMakeYellView.m */; };
 		FB201AA9188E414300059C5D /* YellinMouthYellView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AA8188E414300059C5D /* YellinMouthYellView.m */; };
+		FB201ABE188F4B7A00059C5D /* YellinConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201ABD188F4B7A00059C5D /* YellinConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		FB201AA5188E412F00059C5D /* YellinMakeYellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinMakeYellView.m; sourceTree = "<group>"; };
 		FB201AA7188E414300059C5D /* YellinMouthYellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinMouthYellView.h; sourceTree = "<group>"; };
 		FB201AA8188E414300059C5D /* YellinMouthYellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinMouthYellView.m; sourceTree = "<group>"; };
+		FB201ABC188F4B7A00059C5D /* YellinConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YellinConstants.h; path = ../YellinConstants.h; sourceTree = "<group>"; };
+		FB201ABD188F4B7A00059C5D /* YellinConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YellinConstants.m; path = ../YellinConstants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 		FB201A67188E301200059C5D /* yellin */ = {
 			isa = PBXGroup;
 			children = (
+				FB201ABC188F4B7A00059C5D /* YellinConstants.h */,
+				FB201ABD188F4B7A00059C5D /* YellinConstants.m */,
 				FB201AA3188E411200059C5D /* TabViews */,
 				FB201AA2188E410100059C5D /* TabControllers */,
 				FB201A70188E301200059C5D /* YellinAppDelegate.h */,
@@ -282,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB201A6E188E301200059C5D /* main.m in Sources */,
+				FB201ABE188F4B7A00059C5D /* YellinConstants.m in Sources */,
 				FB201AA1188E37FE00059C5D /* YellinMouthSoundsViewController.m in Sources */,
 				FB201AA6188E412F00059C5D /* YellinMakeYellView.m in Sources */,
 				FB201A9E188E37E400059C5D /* YellinMakeYellViewController.m in Sources */,
