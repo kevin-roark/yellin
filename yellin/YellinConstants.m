@@ -9,3 +9,5 @@
 #import "YellinConstants.h"
 
 float MAX_RECORDING_TIME = 3.0;
+
+NSString *const CHIRP_PARSE_KEY = @"Chirp";

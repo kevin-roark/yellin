@@ -27,6 +27,9 @@
     // set up playing targets
     [v.playButton addTarget:self action:@selector(playButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     
+    // set up sending targets
+    [v.sendButton addTarget:self action:@selector(sendButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    
     // set up audio file for recording
     NSArray *pathComponents = [NSArray arrayWithObjects:
                                [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
@@ -57,10 +60,21 @@
     }
     
 	self.view = v;
+    
+    // have to login if necessary
+    if (![PFUser currentUser] || ![PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
+        NSLog(@"user not logged in");
+        LoginViewController *loginVC = [[LoginViewController alloc] init];
+        [self.navigationController pushViewController:loginVC animated:NO];
+    }
+    else {
+        NSLog(@"User is logged in");
+        NSLog(@"Current user: %@", [PFUser currentUser].description);
+    }
 }
 
 - (void)recordButtonPressed {
-    NSLog(@"record button pressed");
+    NSLog(@"record button pressed oh yeah");
     
     if (self.player.playing) { // shouldn't happen, but doesn't hurt
         [self.player stop];
@@ -114,6 +128,35 @@
             [self.player play];
         }
     }
+}
+
+- (void)sendButtonPressed {
+    NSLog(@"send button pressed");
+    NSData *audioData = [NSData dataWithContentsOfURL:self.recorder.url];
+    PFFile *audioFile = [PFFile fileWithData:audioData];
+    [audioFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        // audio is uploaded to parse!!
+        if (!error) {
+            NSLog(@"uploaded audio, creating chirp object");
+            PFObject *chirp = [PFObject objectWithClassName:CHIRP_PARSE_KEY];
+            chirp[@"original_sound"] = audioFile;
+            chirp[@"has_mouth_sound"] = [NSNumber numberWithBool:NO];
+            chirp[@"from_user"] = [PFUser currentUser];
+            [chirp saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (!error) {
+                    NSLog(@"created chirp objectttt");
+                }
+                else {
+                    NSLog(@"failed to create chirp: %@", [error localizedDescription]);
+                }
+            }];
+        }
+        else {
+            NSLog(@"failed to upload audio: %@", [error localizedDescription]);
+        }
+    } progressBlock:^(int percentDone) {
+        // code to display percent of audio uploaded or something
+    }];
 }
 
 - (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{

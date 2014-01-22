@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 #import <AVFoundation/AVFoundation.h>
+#import "LoginViewController.h"
 #import "YellinConstants.h"
 #import "YellinMakeYellView.h"
 
