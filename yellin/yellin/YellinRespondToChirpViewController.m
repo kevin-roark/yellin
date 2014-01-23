@@ -36,21 +36,8 @@
     
     // set up original sound player
     PFFile *originalAudioFile = [self.chirp objectForKey:@"original_sound"];
-    NSURL *originalAudioFileURL = [NSURL URLWithString:originalAudioFile.url];
-    NSError *err;
-    NSData *originalAudioData = [[NSData alloc] initWithContentsOfURL:originalAudioFileURL options:NSDataReadingMappedIfSafe error:&err];
-    if (err) {
-        NSLog(@"erorr loading audio data: %@", [err localizedDescription]);
-    }
-    err = nil;
-    self.originalPlayer = [[AVAudioPlayer alloc] initWithData:originalAudioData error:&err];
-    if (err) {
-        NSLog(@"Error making original sound player: %@", [err localizedDescription]);
-    }
-    else {
-        NSLog(@"set up original player all good");
-        self.originalPlayer.delegate = self;
-    }
+    self.originalPlayer = [YellinAudioPlayer getConfiguredPlayerWithParseAudioFile:originalAudioFile];
+    self.originalPlayer.delegate = self;
     
     self.navigationController.navigationBarHidden = NO;
     self.view = chirpResponseView;
@@ -67,7 +54,7 @@
             self.chirp[@"mouth_sound"] = audioFile;
             self.chirp[@"has_mouth_sound"] = [NSNumber numberWithBool:YES];
             self.chirp[@"mouthing_user"] = [PFUser currentUser];
-            self.chirp[@"original_sound"] = audioFile;
+            self.chirp[@"respondedAt"] = [NSDate date];
             [self.chirp saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if (!error) {
                     NSLog(@"updated chirp objectttt");

@@ -11,6 +11,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "YellinRespondToChirpView.h"
 #import "YellinAudioRecorder.h"
+#import "YellinAudioPlayer.h"
 
 @interface YellinRespondToChirpViewController : UIViewController<AVAudioPlayerDelegate, AVAudioRecorderDelegate, UIAlertViewDelegate>
 

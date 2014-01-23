@@ -15,4 +15,13 @@
     return theFew;
 }
 
++ (UILabel *)getTitleLabel:(NSString *)title {
+    UILabel *returnLabel = [[UILabel alloc] init];
+    returnLabel.text = title;
+    returnLabel.font = [UIFont fontWithName:@"Helvetica" size:16.0];
+    returnLabel.backgroundColor = [UIColor clearColor];
+    returnLabel.textColor = [UIColor blackColor];
+    return returnLabel;
+}
+
 @end

@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //self.navigationItem.titleView = [YellinUtility getTitleLabel:@"record a sound"];
+    //[self.navigationItem.titleView sizeToFit];
+    self.navigationItem.title = @"record a sound";
+    
     YellinMakeYellView *v = [[YellinMakeYellView alloc] initWithFrame:self.view.frame];
     
     // set up recording targets

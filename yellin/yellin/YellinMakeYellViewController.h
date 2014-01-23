@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import <AVFoundation/AVFoundation.h>
 #import "LoginViewController.h"
+#import "YellinUtility.h"
 #import "YellinConstants.h"
 #import "YellinMakeYellView.h"
 #import "YellinAudioRecorder.h"

@@ -30,7 +30,7 @@
     [tabs addObject:makeYellNVC];
     
     // mouth sound responses view
-    YellinMouthSoundsViewController *mouthSoundsVC = [[YellinMouthSoundsViewController alloc] init];
+    YellinMouthSoundsViewController *mouthSoundsVC = [[YellinMouthSoundsViewController alloc] initWithStyle:UITableViewStyleGrouped];
     YellinNavigationViewController *mouthSoundsNVC = [[YellinNavigationViewController alloc] initWithRootViewController:mouthSoundsVC];
     mouthSoundsNVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"replies" image:[UIImage imageNamed:@"second"] selectedImage:[UIImage imageNamed:@"second"]];
     [tabs addObject:mouthSoundsNVC];

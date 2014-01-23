@@ -47,6 +47,7 @@
 		FB201AF218908DFE00059C5D /* YellinRespondToChirpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AF118908DFE00059C5D /* YellinRespondToChirpViewController.m */; };
 		FB201AF518908F3F00059C5D /* YellinRespondToChirpView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AF418908F3F00059C5D /* YellinRespondToChirpView.m */; };
 		FB201AFA1890A64500059C5D /* YellinAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AF91890A64500059C5D /* YellinAudioRecorder.m */; };
+		FB201AFD1890C01E00059C5D /* YellinAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AFC1890C01E00059C5D /* YellinAudioPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,8 @@
 		FB201AF418908F3F00059C5D /* YellinRespondToChirpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinRespondToChirpView.m; sourceTree = "<group>"; };
 		FB201AF81890A64500059C5D /* YellinAudioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinAudioRecorder.h; sourceTree = "<group>"; };
 		FB201AF91890A64500059C5D /* YellinAudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinAudioRecorder.m; sourceTree = "<group>"; };
+		FB201AFB1890C01E00059C5D /* YellinAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinAudioPlayer.h; sourceTree = "<group>"; };
+		FB201AFC1890C01E00059C5D /* YellinAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinAudioPlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +212,8 @@
 				FB201A71188E301200059C5D /* YellinAppDelegate.m */,
 				FB201AF81890A64500059C5D /* YellinAudioRecorder.h */,
 				FB201AF91890A64500059C5D /* YellinAudioRecorder.m */,
+				FB201AFB1890C01E00059C5D /* YellinAudioPlayer.h */,
+				FB201AFC1890C01E00059C5D /* YellinAudioPlayer.m */,
 				FB201A73188E301200059C5D /* Main.storyboard */,
 				FB201A7C188E301200059C5D /* Images.xcassets */,
 				FB201A68188E301200059C5D /* Supporting Files */,
@@ -427,6 +432,7 @@
 				FB201AA9188E414300059C5D /* YellinMouthYellView.m in Sources */,
 				FB201AE518904E6800059C5D /* YellinMakeMouthSoundViewController.m in Sources */,
 				FB201AF218908DFE00059C5D /* YellinRespondToChirpViewController.m in Sources */,
+				FB201AFD1890C01E00059C5D /* YellinAudioPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

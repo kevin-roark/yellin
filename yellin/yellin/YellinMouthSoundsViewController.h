@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
+#import "YellinConstants.h"
+#import "YellinSoundRespondedCell.h"
+#import "YellinAudioPlayer.h"
 
-@interface YellinMouthSoundsViewController : UIViewController
+@interface YellinMouthSoundsViewController : PFQueryTableViewController
+
+@property (nonatomic, strong) AVAudioPlayer *audioPlayer;
 
 @end

@@ -13,4 +13,6 @@
 
 + (NSSet *) theChosenFew;
 
++ (UILabel *)getTitleLabel:(NSString *)title;
+
 @end

@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface YellinSoundRespondedCell : UITableViewCell
+
+@property (nonatomic, strong) PFObject *chirp;
+
+@property (nonatomic, strong) UILabel *fromWhichGodLabel;
+@property (nonatomic, strong) UILabel *responseTimeLabel;
+
+@property (nonatomic, strong) UIButton *playOriginalButton;
+@property (nonatomic, strong) UIButton *playMouthButton;
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier chirpObject:(PFObject *)chirp;
 
 @end
