@@ -9,3 +9,5 @@ TODO:
 * tab bar icons
 * feedback for user after recording sound
 * maybe decide ordering for chirps in tab 2
+* the about tab
+* highlight background color on recording tab when any button pressed

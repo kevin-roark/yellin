@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import "YellinConstants.h"
+#import "YellinUtility.h"
 #import "YellinSoundRespondedCell.h"
 #import "YellinAudioPlayer.h"
 

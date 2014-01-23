@@ -17,6 +17,8 @@
 
 @interface YellinMakeYellViewController : UIViewController<AVAudioPlayerDelegate, AVAudioRecorderDelegate>
 
+@property (nonatomic, strong) YellinMakeYellView *makeYellView;
+
 @property (nonatomic, strong) YellinAudioRecorder *recorder;
 @property (nonatomic, strong) AVAudioPlayer *player;
 

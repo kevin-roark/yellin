@@ -28,6 +28,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [YellinUtility coolYellinColor];
+        
+    UILabel *titleLabel = [YellinUtility getTitleLabel:@"hear ur sounds"];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.frame = CGRectMake(0, 0, self.view.frame.size.width, 30);
+    [self.view addSubview:titleLabel];
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

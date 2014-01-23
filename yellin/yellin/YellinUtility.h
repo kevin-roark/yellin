@@ -15,4 +15,7 @@
 
 + (UILabel *)getTitleLabel:(NSString *)title;
 
++ (UIColor *)coolYellinColor;
++ (UIColor *)warmYellinColor;
+
 @end

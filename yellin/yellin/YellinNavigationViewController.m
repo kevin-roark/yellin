@@ -19,7 +19,7 @@
     
     self.navigationBarHidden = YES;
     
-    self.navigationBar.backgroundColor = [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1.0];
+    self.navigationBar.backgroundColor = [UIColor colorWithRed:0.98 green:0.98 blue:0.98 alpha:1.0];
     self.navigationBar.layer.borderColor = [UIColor lightGrayColor].CGColor;
 }
 

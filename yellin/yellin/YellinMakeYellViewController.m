@@ -19,27 +19,36 @@
     
     //self.navigationItem.titleView = [YellinUtility getTitleLabel:@"record a sound"];
     //[self.navigationItem.titleView sizeToFit];
-    self.navigationItem.title = @"record a sound";
+    //self.navigationItem.title = @"record a sound";
     
-    YellinMakeYellView *v = [[YellinMakeYellView alloc] initWithFrame:self.view.frame];
+    self.makeYellView = [[YellinMakeYellView alloc]
+                             initWithFrame:CGRectMake(0, 56, self.view.frame.size.width, self.view.frame.size.height - 56)];
+    
+    // set up title stuff
+    UILabel *titleLabel = [YellinUtility getTitleLabel:@"record a sound"];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.frame = CGRectMake(0, 5, self.view.frame.size.width, 60);
+    [self.view addSubview:titleLabel];
+    
+    self.view.backgroundColor = [YellinUtility warmYellinColor];
     
     // set up recording targets
-    [v.recordButton addTarget:self action:@selector(recordButtonPressed) forControlEvents:UIControlEventTouchDown];
-    [v.recordButton addTarget:self action:@selector(recordButtonReleased) forControlEvents:UIControlEventTouchUpInside];
-    [v.recordButton addTarget:self action:@selector(recordButtonReleased) forControlEvents:UIControlEventTouchUpOutside];
+    [self.makeYellView.recordButton addTarget:self action:@selector(recordButtonPressed) forControlEvents:UIControlEventTouchDown];
+    [self.makeYellView.recordButton addTarget:self action:@selector(recordButtonReleased) forControlEvents:UIControlEventTouchUpInside];
+    [self.makeYellView.recordButton addTarget:self action:@selector(recordButtonReleased) forControlEvents:UIControlEventTouchUpOutside];
     
     // set up playing targets
-    [v.playButton addTarget:self action:@selector(playButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [self.makeYellView.playButton addTarget:self action:@selector(playButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     
     // set up sending targets
-    [v.sendButton addTarget:self action:@selector(sendButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [self.makeYellView.sendButton addTarget:self action:@selector(sendButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     
     // set up recorder
     self.recorder = [YellinAudioRecorder getConfiguredRecorderWithFileName:@"lil_yell.m4a"];
     self.recorder.delegate = self;
     [self.recorder prepareToRecord];
     
-	self.view = v;
+    [self.view addSubview:self.makeYellView];
     
     // have to login if necessary
     if (![PFUser currentUser] || ![PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
@@ -83,9 +92,9 @@
 - (void)recordButtonReleased {
     NSLog(@"record button released");
     [self.recorder stop];
-    YellinMakeYellView *v = (YellinMakeYellView *)self.view;
-    if (!v.performedInitialAnimation) {
-        [v animateRecordButtonUpWithDuration:1.0];
+    
+    if (!self.makeYellView.performedInitialAnimation) {
+        [self.makeYellView animateRecordButtonUpWithDuration:1.0];
     }
     
     // in the future would be cool to change to 'pause' ala vine so that u can compose
@@ -94,9 +103,8 @@
 
 - (void)updateMidRecordingStatusView:(NSTimer *)timer {
     if (self.recorder.recording) {
-        YellinMakeYellView *v = (YellinMakeYellView *)self.view;
         if (self.recorder.currentTime <= MAX_RECORDING_TIME + 0.04) {
-            [v updateRecordingLengthStatus:self.recorder.currentTime];
+            [self.makeYellView updateRecordingLengthStatus:self.recorder.currentTime];
         }
         else {
             [timer invalidate];
@@ -139,8 +147,7 @@
             [chirp saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if (!error) {
                     NSLog(@"created chirp objectttt");
-                    YellinMakeYellView *v = (YellinMakeYellView *)self.view;
-                    [v revertToOriginalState];
+                    [self.makeYellView revertToOriginalState];
                 }
                 else {
                     NSLog(@"failed to create chirp: %@", [error localizedDescription]);

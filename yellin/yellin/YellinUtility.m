@@ -24,4 +24,12 @@
     return returnLabel;
 }
 
++ (UIColor *)coolYellinColor {
+    return [UIColor colorWithRed:0.8 green:0.3 blue:0.3 alpha:1];
+}
+
++ (UIColor *)warmYellinColor {
+    return [UIColor colorWithRed:0.3 green:0.3 blue:0.8 alpha:1];
+}
+
 @end
