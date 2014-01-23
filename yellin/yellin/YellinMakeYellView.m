@@ -15,6 +15,8 @@
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
         
+        self.performedInitialAnimation = NO;
+        
         self.recordButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         self.recordButton.frame = CGRectMake(self.frame.size.width/2 - 75, self.frame.size.height - 220, 150, 150);
         self.recordButton.backgroundColor = [UIColor redColor];
@@ -23,20 +25,23 @@
         [self addSubview:self.recordButton];
         
         self.playButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        self.playButton.frame = CGRectMake(20, self.frame.size.height - 175, self.frame.size.width - 40, 50);
+        self.playButton.frame = CGRectMake(20, self.frame.size.height - 25, self.frame.size.width - 40, 50);
         self.playButton.backgroundColor = [UIColor greenColor];
         self.playButton.tintColor = [UIColor whiteColor];
         [self.playButton setTitle:@"play" forState:UIControlStateNormal];
+        [self addSubview:self.playButton];
         
         self.sendButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         self.sendButton.frame = CGRectOffset(self.playButton.frame, 0, 60);
         self.sendButton.backgroundColor = [UIColor orangeColor];
         self.sendButton.tintColor = [UIColor whiteColor];
         [self.sendButton setTitle:@"send to us" forState:UIControlStateNormal];
+        [self addSubview:self.sendButton];
         
-        self.recordingTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width - 105, 60, 100, 30)];
+        self.recordingTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 90, self.frame.size.width - 20, 60)];
         self.recordingTimeLabel.textColor = [UIColor blackColor];
-        self.recordingTimeLabel.textAlignment = NSTextAlignmentRight;
+        self.recordingTimeLabel.textAlignment = NSTextAlignmentCenter;
+        self.recordingTimeLabel.font = [UIFont fontWithName:@"Helvetica" size:40.0];
         self.recordingTimeLabel.text = @"";
         [self addSubview:self.recordingTimeLabel];
     }
@@ -44,28 +49,43 @@
 }
 
 - (void)addPostSoundButtons {
-    [self addSubview:self.playButton];
-    [self addSubview:self.sendButton];
+    //[self addSubview:self.playButton];
+    //[self addSubview:self.sendButton];
 }
 
 - (void)removePostSoundButtons {
-    [self.playButton removeFromSuperview];
-    [self.sendButton removeFromSuperview];
+    //[self.playButton removeFromSuperview];
+    //[self.sendButton removeFromSuperview];
 }
 
 - (void)animateRecordButtonUpWithDuration:(CGFloat)duration {
-    CGRect f = self.recordButton.frame;
+    self.performedInitialAnimation = YES;
     [UIView animateWithDuration:duration animations:^{
         // animation block
-        self.recordButton.frame = CGRectMake(f.origin.x, f.origin.y - 150, f.size.width, f.size.height);
+        self.recordButton.frame = CGRectOffset(self.recordButton.frame, 0, -150);
+        self.playButton.frame = CGRectOffset(self.playButton.frame, 0, -150);
+        self.sendButton.frame = CGRectOffset(self.sendButton.frame, 0, -150);
     } completion:^(BOOL finished) {
         // completion block
-        [self addPostSoundButtons];
+    }];
+}
+
+- (void)revertToOriginalState {
+    self.performedInitialAnimation = NO;
+    self.recordingTimeLabel.text = @"";
+    
+    [UIView animateWithDuration:1.0 animations:^{
+        // animation block
+        self.recordButton.frame = CGRectOffset(self.recordButton.frame, 0, 150);
+        self.playButton.frame = CGRectOffset(self.playButton.frame, 0, 150);
+        self.sendButton.frame = CGRectOffset(self.sendButton.frame, 0, 150);
+    } completion:^(BOOL finished) {
+        // completion block
     }];
 }
 
 - (void) updateRecordingLengthStatus:(NSTimeInterval)currentLength {
-    self.recordingTimeLabel.text = [NSString stringWithFormat:@"%.02f // %.01f", currentLength, MAX_RECORDING_TIME];
+    self.recordingTimeLabel.text = [NSString stringWithFormat:@"%.01f // %.01f", currentLength, MAX_RECORDING_TIME];
 }
 
 /*

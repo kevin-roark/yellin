@@ -16,9 +16,14 @@
 
 @property (nonatomic, strong) UILabel *fromWhichGodLabel;
 @property (nonatomic, strong) UILabel *responseTimeLabel;
+@property (nonatomic, strong) UILabel *creationTimeLabel;
+
+@property (nonatomic, strong) UILabel *noResponseYetLabel;
 
 @property (nonatomic, strong) UIButton *playOriginalButton;
 @property (nonatomic, strong) UIButton *playMouthButton;
+
++ (CGFloat)getHeight;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier chirpObject:(PFObject *)chirp;
 

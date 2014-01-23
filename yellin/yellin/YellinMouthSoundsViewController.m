@@ -21,6 +21,8 @@
     vc.pullToRefreshEnabled = YES;
     vc.paginationEnabled = NO;
     
+    vc.tableView.separatorColor = [UIColor redColor];
+    
     return vc;
 }
 
@@ -28,13 +30,13 @@
     [super viewDidLoad];
 }
 
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return 0;
-//}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [YellinSoundRespondedCell getHeight];
+}
 
 - (PFQuery *)queryForTable {
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
-    [query whereKey:@"has_mouth_sound" equalTo:[NSNumber numberWithBool:YES]];
+    //[query whereKey:@"has_mouth_sound" equalTo:[NSNumber numberWithBool:YES]];
     [query whereKey:@"from_user" equalTo:[PFUser currentUser]];
     [query includeKey:@"mouthing_user"]; // include data for us to show responder's name
     

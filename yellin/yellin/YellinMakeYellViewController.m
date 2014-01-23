@@ -83,6 +83,10 @@
 - (void)recordButtonReleased {
     NSLog(@"record button released");
     [self.recorder stop];
+    YellinMakeYellView *v = (YellinMakeYellView *)self.view;
+    if (!v.performedInitialAnimation) {
+        [v animateRecordButtonUpWithDuration:1.0];
+    }
     
     // in the future would be cool to change to 'pause' ala vine so that u can compose
     // sound from multiple places u know but pause doesn't set off the finished recording event
@@ -91,7 +95,14 @@
 - (void)updateMidRecordingStatusView:(NSTimer *)timer {
     if (self.recorder.recording) {
         YellinMakeYellView *v = (YellinMakeYellView *)self.view;
-        [v updateRecordingLengthStatus:self.recorder.currentTime];
+        if (self.recorder.currentTime <= MAX_RECORDING_TIME + 0.04) {
+            [v updateRecordingLengthStatus:self.recorder.currentTime];
+        }
+        else {
+            [timer invalidate];
+            timer = nil;
+            [self recordButtonReleased];
+        }
     }
     else if (timer && !self.recorder.recording) {
         [timer invalidate];
@@ -128,6 +139,8 @@
             [chirp saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if (!error) {
                     NSLog(@"created chirp objectttt");
+                    YellinMakeYellView *v = (YellinMakeYellView *)self.view;
+                    [v revertToOriginalState];
                 }
                 else {
                     NSLog(@"failed to create chirp: %@", [error localizedDescription]);
@@ -149,11 +162,7 @@
 - (void) audioRecorderDidFinishRecording:(AVAudioRecorder *)avrecorder successfully:(BOOL)flag{
     NSLog(@"finished recording");
     
-    if (flag) {
-        YellinMakeYellView *v = (YellinMakeYellView *)self.view;
-        [v animateRecordButtonUpWithDuration:1.0];
-    }
-    else {
+    if (!flag) {
         NSLog(@"failed recording ...");
     }
 }

@@ -17,11 +17,15 @@
 
 @property (nonatomic, strong) UILabel *recordingTimeLabel;
 
+@property (nonatomic) BOOL performedInitialAnimation;
+
 - (void) addPostSoundButtons;
 - (void) removePostSoundButtons;
 
 - (void) animateRecordButtonUpWithDuration:(CGFloat)duration;
 
 - (void) updateRecordingLengthStatus:(NSTimeInterval)currentLength;
+
+- (void)revertToOriginalState;
 
 @end
