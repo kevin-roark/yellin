@@ -38,7 +38,7 @@
         [self.sendButton setTitle:@"send to us" forState:UIControlStateNormal];
         [self addSubview:self.sendButton];
         
-        self.recordingTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 40, self.frame.size.width - 20, 60)];
+        self.recordingTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 80, self.frame.size.width - 20, 60)];
         self.recordingTimeLabel.textColor = [UIColor blackColor];
         self.recordingTimeLabel.textAlignment = NSTextAlignmentCenter;
         self.recordingTimeLabel.font = [UIFont fontWithName:@"Helvetica" size:40.0];

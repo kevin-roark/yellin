@@ -1,27 +1,24 @@
 //
-//  YellinNavigationViewController.m
+//  YellinViewMouthResponsesController.m
 //  yellin
 //
-//  Created by Kevin Roark on 1/22/14.
+//  Created by Kevin Roark on 1/23/14.
 //  Copyright (c) 2014 Kevin Roark. All rights reserved.
 //
 
-#import "YellinNavigationViewController.h"
-#import "YellinUtility.h"
+#import "YellinViewMouthResponsesController.h"
 
-@interface YellinNavigationViewController ()
+@interface YellinViewMouthResponsesController ()
 
 @end
 
-@implementation YellinNavigationViewController
+@implementation YellinViewMouthResponsesController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationBarHidden = YES;
+    self.tableVC = [[YellinMouthSoundsViewController alloc] initWithStyle:UITableViewStyleGrouped];
     
-    //self.navigationBar.backgroundColor = [UIColor colorWithRed:0.98 green:0.98 blue:0.98 alpha:1.0];
-    self.navigationBar.layer.borderColor = [UIColor lightGrayColor].CGColor;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {

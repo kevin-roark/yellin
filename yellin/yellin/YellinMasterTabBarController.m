@@ -27,14 +27,14 @@
     YellinMakeYellViewController *makeYellVC = [[YellinMakeYellViewController alloc] init];
     YellinNavigationViewController *makeYellNVC = [[YellinNavigationViewController alloc] initWithRootViewController:makeYellVC];
     makeYellNVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"yell" image:[UIImage imageNamed:@"first"] selectedImage:[UIImage imageNamed:@"first"]];
-    makeYellNVC.navigationBarHidden = YES;
+    makeYellNVC.navigationBarHidden = NO;
     [tabs addObject:makeYellNVC];
     
     // mouth sound responses view
     YellinMouthSoundsViewController *mouthSoundsVC = [[YellinMouthSoundsViewController alloc] initWithStyle:UITableViewStyleGrouped];
     YellinNavigationViewController *mouthSoundsNVC = [[YellinNavigationViewController alloc] initWithRootViewController:mouthSoundsVC];
     mouthSoundsNVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"replies" image:[UIImage imageNamed:@"second"] selectedImage:[UIImage imageNamed:@"second"]];
-    mouthSoundsNVC.navigationBarHidden = YES;
+    mouthSoundsNVC.navigationBarHidden = NO;
     [tabs addObject:mouthSoundsNVC];
     
     // here do something to see if user is one of the "chosen few"

@@ -21,16 +21,11 @@
     //[self.navigationItem.titleView sizeToFit];
     //self.navigationItem.title = @"record a sound";
     
-    self.makeYellView = [[YellinMakeYellView alloc]
-                             initWithFrame:CGRectMake(0, 56, self.view.frame.size.width, self.view.frame.size.height - 56)];
+    self.makeYellView = [[YellinMakeYellView alloc] initWithFrame:self.view.frame];
     
-    // set up title stuff
-    UILabel *titleLabel = [YellinUtility getTitleLabel:@"record a sound"];
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.frame = CGRectMake(0, 5, self.view.frame.size.width, 60);
-    [self.view addSubview:titleLabel];
-    
-    self.view.backgroundColor = [YellinUtility warmYellinColor];
+    [UINavigationBar appearance].barTintColor = [YellinUtility warmYellinColor];
+    self.navigationItem.titleView = [YellinUtility getTitleLabel:@"record a sound"];
+    [self.navigationItem.titleView sizeToFit];
     
     // set up recording targets
     [self.makeYellView.recordButton addTarget:self action:@selector(recordButtonPressed) forControlEvents:UIControlEventTouchDown];
@@ -48,7 +43,7 @@
     self.recorder.delegate = self;
     [self.recorder prepareToRecord];
     
-    [self.view addSubview:self.makeYellView];
+    self.view = self.makeYellView;
     
     // have to login if necessary
     if (![PFUser currentUser] || ![PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
@@ -60,6 +55,15 @@
         NSLog(@"User is logged in");
         NSLog(@"Current user: %@", [PFUser currentUser].description);
     }
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [UINavigationBar appearance].barTintColor = [YellinUtility warmYellinColor];
 }
 
 - (void)recordButtonPressed {

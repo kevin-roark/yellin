@@ -30,16 +30,27 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [YellinUtility coolYellinColor];
-        
-    UILabel *titleLabel = [YellinUtility getTitleLabel:@"hear ur sounds"];
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.frame = CGRectMake(0, 0, self.view.frame.size.width, 30);
-    [self.view addSubview:titleLabel];
     
+    self.navigationItem.titleView = [YellinUtility getTitleLabel:@"hear ur sounds"];
+    [self.navigationItem.titleView sizeToFit];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [UINavigationBar appearance].barTintColor = [YellinUtility coolYellinColor];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.barTintColor = [YellinUtility coolYellinColor];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [YellinSoundRespondedCell getHeight];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 0.00000001;
 }
 
 - (PFQuery *)queryForTable {

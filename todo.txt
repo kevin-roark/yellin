@@ -4,7 +4,6 @@ TODO:
 * condition for nothing in table for second tab
 * decide what to do with chirps after mouth sound is heard
 * clean up design on tab 2
-* figure out titles on navbar
 * app icon
 * tab bar icons
 * feedback for user after recording sound
