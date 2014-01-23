@@ -30,34 +30,10 @@
     // set up sending targets
     [v.sendButton addTarget:self action:@selector(sendButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     
-    // set up audio file for recording
-    NSArray *pathComponents = [NSArray arrayWithObjects:
-                               [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
-                               @"lil_yell.m4a",
-                               nil];
-    NSURL *outputFileURL = [NSURL fileURLWithPathComponents:pathComponents];
-    
-    // Setup audio session
-    AVAudioSession *session = [AVAudioSession sharedInstance];
-    [session setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
-    
-    // Define the recorder setting
-    NSMutableDictionary *recordSetting = [[NSMutableDictionary alloc] init];
-    [recordSetting setValue:[NSNumber numberWithInt:kAudioFormatMPEG4AAC] forKey:AVFormatIDKey];
-    [recordSetting setValue:[NSNumber numberWithFloat:44100.0] forKey:AVSampleRateKey];
-    [recordSetting setValue:[NSNumber numberWithInt: 2] forKey:AVNumberOfChannelsKey];
-    
-    // Initiate and prepare the recorder
-    NSError *err;
-    self.recorder = [[AVAudioRecorder alloc] initWithURL:outputFileURL settings:recordSetting error:&err];
-    if (err) {
-        NSLog(@"Error: %@", [err localizedDescription]);
-    }
-    else {
-        self.recorder.delegate = self;
-        self.recorder.meteringEnabled = YES;
-        [self.recorder prepareToRecord];
-    }
+    // set up recorder
+    self.recorder = [YellinAudioRecorder getConfiguredRecorderWithFileName:@"lil_yell.m4a"];
+    self.recorder.delegate = self;
+    [self.recorder prepareToRecord];
     
 	self.view = v;
     
@@ -88,13 +64,16 @@
             NSLog(@"Error: %@", [err localizedDescription]);
         }
         else {
-            [self.recorder record];
-            [NSTimer scheduledTimerWithTimeInterval:0.1
-                     target:self selector:@selector(updateMidRecordingStatusView:)
-                     userInfo:nil repeats:YES];
+            [self startRecording];
         }
     }
-    
+}
+
+- (void)startRecording {
+    [NSTimer scheduledTimerWithTimeInterval:0.1
+            target:self selector:@selector(updateMidRecordingStatusView:)
+            userInfo:nil repeats:YES];
+    [self.recorder record];
 }
 
 - (void)recordButtonReleased {
@@ -108,7 +87,7 @@
 - (void)updateMidRecordingStatusView:(NSTimer *)timer {
     if (self.recorder.recording) {
         YellinMakeYellView *v = (YellinMakeYellView *)self.view;
-        v.recordingTimeLabel.text = [NSString stringWithFormat:@"%.02f // %.01f", self.recorder.currentTime, MAX_RECORDING_TIME];
+        [v updateRecordingLengthStatus:self.recorder.currentTime];
     }
     else if (timer && !self.recorder.recording) {
         [timer invalidate];
@@ -168,17 +147,10 @@
     
     if (flag) {
         YellinMakeYellView *v = (YellinMakeYellView *)self.view;
-        [UIView animateWithDuration:1.0 animations:^{
-            // animation block
-            CGRect f = v.recordButton.frame;
-            v.recordButton.frame = CGRectMake(f.origin.x, f.origin.y - 150, f.size.width, f.size.height);
-        } completion:^(BOOL finished) {
-            // completion block
-            [v addPostSoundButtons];
-        }];
+        [v animateRecordButtonUpWithDuration:1.0];
     }
     else {
-        
+        NSLog(@"failed recording ...");
     }
 }
 

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import "YellinMasterTabBarController.h"
+#import "YellinNavigationViewController.h"
 
 @interface YellinAppDelegate : UIResponder <UIApplicationDelegate>
 

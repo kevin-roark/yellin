@@ -12,10 +12,11 @@
 #import "LoginViewController.h"
 #import "YellinConstants.h"
 #import "YellinMakeYellView.h"
+#import "YellinAudioRecorder.h"
 
 @interface YellinMakeYellViewController : UIViewController<AVAudioPlayerDelegate, AVAudioRecorderDelegate>
 
-@property (nonatomic, strong) AVAudioRecorder *recorder;
+@property (nonatomic, strong) YellinAudioRecorder *recorder;
 @property (nonatomic, strong) AVAudioPlayer *player;
 
 @end

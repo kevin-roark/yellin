@@ -43,6 +43,21 @@
             }
         } else if (user.isNew) {
             NSLog(@"User with facebook signed up and logged in!");
+            
+            // new user so add real name and other stuff if want
+            FBRequest *facebookRequest = [FBRequest requestForMe];
+            [facebookRequest startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+                if (!error) {
+                    NSDictionary *userData = (NSDictionary *)result;
+                    NSLog(@"%@", userData[@"name"]);
+                    user[@"name"] = userData[@"name"];
+                    [user saveInBackground];
+                }
+                else {
+                    NSLog(@"error with facebook request: %@", [error localizedDescription]);
+                }
+            }];
+            
             [self.navigationController popViewControllerAnimated:YES]; // go back to tabs
         } else {
             NSLog(@"User with facebook logged in!");

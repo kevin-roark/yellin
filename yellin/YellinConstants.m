@@ -11,3 +11,7 @@
 float MAX_RECORDING_TIME = 3.0;
 
 NSString *const CHIRP_PARSE_KEY = @"Chirp";
+
+NSString *const KEVIN_USER_ID = @"jraEIgCzyq";
+NSString *const DYLAN_USER_ID = @"xxxxx";
+NSString *const HENRY_USER_ID = @"ooooo";

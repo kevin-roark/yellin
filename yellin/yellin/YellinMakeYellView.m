@@ -53,6 +53,21 @@
     [self.sendButton removeFromSuperview];
 }
 
+- (void)animateRecordButtonUpWithDuration:(CGFloat)duration {
+    CGRect f = self.recordButton.frame;
+    [UIView animateWithDuration:duration animations:^{
+        // animation block
+        self.recordButton.frame = CGRectMake(f.origin.x, f.origin.y - 150, f.size.width, f.size.height);
+    } completion:^(BOOL finished) {
+        // completion block
+        [self addPostSoundButtons];
+    }];
+}
+
+- (void) updateRecordingLengthStatus:(NSTimeInterval)currentLength {
+    self.recordingTimeLabel.text = [NSString stringWithFormat:@"%.02f // %.01f", currentLength, MAX_RECORDING_TIME];
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

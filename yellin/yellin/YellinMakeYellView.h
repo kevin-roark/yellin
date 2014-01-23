@@ -20,4 +20,8 @@
 - (void) addPostSoundButtons;
 - (void) removePostSoundButtons;
 
+- (void) animateRecordButtonUpWithDuration:(CGFloat)duration;
+
+- (void) updateRecordingLengthStatus:(NSTimeInterval)currentLength;
+
 @end

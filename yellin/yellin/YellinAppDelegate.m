@@ -21,11 +21,14 @@
     [PFFacebookUtils initializeFacebook];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.window.rootViewController];
-    self.navigationController.navigationBarHidden = YES;
+    YellinMasterTabBarController *tabBar = [YellinMasterTabBarController generateMainScreen];
+    
+    self.navigationController = [[YellinNavigationViewController alloc] initWithRootViewController:tabBar];
     
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
+    
+    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
     
     return YES;
 }
