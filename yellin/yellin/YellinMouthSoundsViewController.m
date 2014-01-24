@@ -21,7 +21,7 @@
     vc.pullToRefreshEnabled = YES;
     vc.paginationEnabled = NO;
     
-    vc.tableView.separatorColor = [UIColor redColor];
+    vc.tableView.separatorColor = [YellinUtility coolYellinColor];
     
     return vc;
 }
@@ -123,6 +123,15 @@
     }
     [self.activeCell.originalTimeline cancelAnimation];
     [self.activeCell.mouthTimeline cancelAnimation];
+    
+    // update the chirp object
+    if (![self.activeCell.chirp objectForKey:@"first_mouth_play_time"]) {
+        [self.activeCell.chirp setObject:[NSDate date] forKey:@"first_mouth_play_time"];
+    }
+    NSNumber *currentMouthPlays = [self.activeCell.chirp objectForKey:@"mouth_plays"];
+    int nextMouthPlays = [currentMouthPlays intValue] + 1;
+    [self.activeCell.chirp setObject:[NSNumber numberWithInt:nextMouthPlays] forKey:@"mouth_plays"];
+    [self.activeCell.chirp saveInBackground];
     
     UIButton *buttonPessed = sender;
     YellinSoundRespondedCell *soundResponseCell = (YellinSoundRespondedCell *)buttonPessed.superview.superview;

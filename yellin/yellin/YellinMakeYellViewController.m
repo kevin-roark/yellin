@@ -163,6 +163,7 @@
             chirp[@"original_sound"] = audioFile;
             chirp[@"has_mouth_sound"] = [NSNumber numberWithBool:NO];
             chirp[@"from_user"] = [PFUser currentUser];
+            chirp[@"mouth_plays"] = [NSNumber numberWithInt:0];
             [chirp saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if (!error) {
                     NSLog(@"created chirp objectttt");
