@@ -73,6 +73,8 @@
         [self.player stop];
     }
     
+    self.view.backgroundColor = [YellinUtility lighterRecordColor];
+    
     if (!self.recorder.recording) { // again this should always be the case
         NSError *err;
         AVAudioSession *session = [AVAudioSession sharedInstance];
@@ -95,9 +97,13 @@
 
 - (void)recordButtonReleased {
     NSLog(@"record button released");
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    CGFloat recordingLength = self.recorder.currentTime;
     [self.recorder stop];
     
-    if (!self.makeYellView.performedInitialAnimation) {
+    if (!self.makeYellView.performedInitialAnimation && recordingLength > MIN_RECORDING_TIME) {
         [self.makeYellView animateRecordButtonUpWithDuration:1.0];
     }
     

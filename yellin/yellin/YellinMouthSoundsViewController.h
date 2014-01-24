@@ -17,4 +17,7 @@
 
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
 
+@property (nonatomic) BOOL nothingHere;
+@property (nonatomic, strong) UILabel *nothingHereLabel;
+
 @end

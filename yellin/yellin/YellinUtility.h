@@ -18,4 +18,9 @@
 + (UIColor *)coolYellinColor;
 + (UIColor *)warmYellinColor;
 
++ (UIColor *)lighterRecordColor;
+
++ (UIColor *)yellinGreen;
++ (UIColor *)lighterYellinGreen;
+
 @end

@@ -29,8 +29,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [YellinUtility coolYellinColor];
+    self.nothingHere = NO;
     
+    self.nothingHereLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, self.view.frame.size.width - 40, 200)];
+    self.nothingHereLabel.text = @"Nothin' here, because you haven't sent sounds!! send us some sounds!!";
+    self.nothingHereLabel.textAlignment = NSTextAlignmentCenter;
+    self.nothingHereLabel.numberOfLines = 0;
+    self.nothingHereLabel.font = [UIFont fontWithName:@"Helvetica" size:24];
+
     self.navigationItem.titleView = [YellinUtility getTitleLabel:@"hear ur sounds"];
     [self.navigationItem.titleView sizeToFit];
 }
@@ -76,6 +82,19 @@
     }
     
     return cell;
+}
+
+- (void)objectsDidLoad:(NSError *)error {
+    [super objectsDidLoad:error];
+    
+    if ([self.objects count] <= 0 && !self.nothingHere) {
+        [self.view addSubview:self.nothingHereLabel];
+        self.nothingHere = YES;
+    }
+    else if (self.nothingHere && [self.objects count] > 0) {
+        [self.nothingHereLabel removeFromSuperview];
+        self.nothingHere = NO;
+    }
 }
 
 - (IBAction)orignalSoundButtonPressed:(id)sender {

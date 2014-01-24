@@ -7,6 +7,7 @@
 //
 
 extern float MAX_RECORDING_TIME;
+extern float MIN_RECORDING_TIME;
 
 extern NSString *const CHIRP_PARSE_KEY;
 
