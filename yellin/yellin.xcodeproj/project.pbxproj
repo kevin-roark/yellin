@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB1F7F6318931B59007B00DA /* YellinAudioTimelineView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1F7F6218931B59007B00DA /* YellinAudioTimelineView.m */; };
 		FB201A62188E301200059C5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201A61188E301200059C5D /* Foundation.framework */; };
 		FB201A64188E301200059C5D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201A63188E301200059C5D /* CoreGraphics.framework */; };
 		FB201A66188E301200059C5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201A65188E301200059C5D /* UIKit.framework */; };
@@ -61,6 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB1F7F6118931B59007B00DA /* YellinAudioTimelineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinAudioTimelineView.h; sourceTree = "<group>"; };
+		FB1F7F6218931B59007B00DA /* YellinAudioTimelineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinAudioTimelineView.m; sourceTree = "<group>"; };
 		FB201A5E188E301200059C5D /* yellin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yellin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB201A61188E301200059C5D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB201A63188E301200059C5D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -294,6 +297,8 @@
 			children = (
 				FB201AF318908F3F00059C5D /* YellinRespondToChirpView.h */,
 				FB201AF418908F3F00059C5D /* YellinRespondToChirpView.m */,
+				FB1F7F6118931B59007B00DA /* YellinAudioTimelineView.h */,
+				FB1F7F6218931B59007B00DA /* YellinAudioTimelineView.m */,
 				FB201AE9189050C200059C5D /* TableCells */,
 				FB201AA3188E411200059C5D /* TabViews */,
 			);
@@ -415,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB201AEC18905F7700059C5D /* YellinSoundNeedsMouthCell.m in Sources */,
+				FB1F7F6318931B59007B00DA /* YellinAudioTimelineView.m in Sources */,
 				FB201AFA1890A64500059C5D /* YellinAudioRecorder.m in Sources */,
 				FB201AD9188F857300059C5D /* LoginViewController.m in Sources */,
 				FB201A6E188E301200059C5D /* main.m in Sources */,
@@ -651,6 +657,7 @@
 				FB201A95188E301200059C5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB201A96188E301200059C5D /* Build configuration list for PBXNativeTarget "yellinTests" */ = {
 			isa = XCConfigurationList;
@@ -659,6 +666,7 @@
 				FB201A98188E301200059C5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -18,7 +18,7 @@
         
         self.chirp = chirp;
         
-        self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, 65);
+        self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, 77);
         
         self.playOriginalButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         self.playOriginalButton.frame = CGRectMake(18.0, 6.0, 140.0, 40);
@@ -33,6 +33,17 @@
         self.playMouthButton.backgroundColor = [UIColor greenColor];
         [self.playMouthButton setTitle:@"mouth sound" forState:UIControlStateNormal];
         
+        self.originalTimeline = [[YellinAudioTimelineView alloc]
+                                 initWithFrame:CGRectMake(self.playOriginalButton.frame.origin.x,
+                                                          self.playOriginalButton.frame.origin.y + self.playOriginalButton.frame.size.height + 2,
+                                                          self.playOriginalButton.frame.size.width, 10)];
+        [self addSubview:self.originalTimeline];
+        
+        self.mouthTimeline = [[YellinAudioTimelineView alloc]
+                              initWithFrame:CGRectMake(self.playMouthButton.frame.origin.x,
+                                                       self.playMouthButton.frame.origin.y + self.playMouthButton.frame.size.height + 2,
+                                                       self.playMouthButton.frame.size.width, 10)];
+        
         NSDateFormatter *timeFormatter = [[NSDateFormatter alloc] init];
         timeFormatter.dateFormat = @"hh:mm - MMM d";
         NSDate *responseTime = [self.chirp objectForKey:@"respondedAt"];
@@ -42,8 +53,8 @@
         self.responseTimeLabel.textColor = [UIColor grayColor];
         self.responseTimeLabel.textAlignment = NSTextAlignmentRight;
         self.responseTimeLabel.frame = CGRectMake(self.playMouthButton.frame.origin.x + 10,
-                                                  self.playMouthButton.frame.origin.y + self.playMouthButton.frame.size.height + 3,
-                                                  65.0, 12.0);
+            self.playMouthButton.frame.origin.y + self.playMouthButton.frame.size.height +  self.mouthTimeline.frame.size.height + 3,
+            65.0, 12.0);
         
         PFUser *god = [self.chirp objectForKey:@"mouthing_user"];
         NSString *godName = [god objectForKey:@"name"];
@@ -65,9 +76,9 @@
         self.creationTimeLabel.textColor = self.responseTimeLabel.textColor;
         self.creationTimeLabel.textAlignment = NSTextAlignmentCenter;
         self.creationTimeLabel.frame = CGRectMake(self.playOriginalButton.frame.origin.x,
-                                                  self.playOriginalButton.frame.origin.y + self.playOriginalButton.frame.size.height + 3,
-                                                  self.playOriginalButton.frame.size.width,
-                                                  self.responseTimeLabel.frame.size.height);
+            self.playOriginalButton.frame.origin.y + self.playOriginalButton.frame.size.height + self.originalTimeline.frame.size.height + 3,
+            self.playOriginalButton.frame.size.width,
+            self.responseTimeLabel.frame.size.height);
         [self addSubview:self.creationTimeLabel];
         
         self.noResponseYetLabel = [[UILabel alloc] init];
@@ -82,6 +93,7 @@
             [self addSubview:self.playMouthButton];
             [self addSubview:self.responseTimeLabel];
             [self addSubview:self.fromWhichGodLabel];
+            [self addSubview:self.mouthTimeline];
         }
         else {
             self.playOriginalButton.frame = CGRectMake(self.playOriginalButton.frame.origin.x,
@@ -102,7 +114,7 @@
 }
 
 + (CGFloat)getHeight {
-    return 65.0;
+    return 77.0;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

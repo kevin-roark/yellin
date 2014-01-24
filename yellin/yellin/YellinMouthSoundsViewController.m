@@ -69,7 +69,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
-    NSString *reuseIdentifierText = [NSString stringWithFormat:@"mouth_response_%@", indexPath];
+    NSString *reuseIdentifierText = nil; //[NSString stringWithFormat:@"mouth_response_%@", indexPath];
     YellinSoundRespondedCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifierText];
     
     if (!cell) {
@@ -101,12 +101,19 @@
     if (self.audioPlayer.playing) { // another sound playin
         [self.audioPlayer pause];
     }
+    [self.activeCell.originalTimeline cancelAnimation];
+    [self.activeCell.mouthTimeline cancelAnimation];
     
     UIButton *buttonPessed = sender;
     YellinSoundRespondedCell *soundResponseCell = (YellinSoundRespondedCell *)buttonPessed.superview.superview;
+    self.activeCell = soundResponseCell;
+    
     PFObject *chirp = soundResponseCell.chirp;
     PFFile *originalAudio = [chirp objectForKey:@"original_sound"];
     self.audioPlayer = [YellinAudioPlayer getConfiguredPlayerWithParseAudioFile:originalAudio];
+    
+    soundResponseCell.originalSoundLength = self.audioPlayer.duration;
+    [self.activeCell.originalTimeline startAnimationofTotalSeconds:self.activeCell.originalSoundLength];
     [self.audioPlayer play];
 }
 
@@ -114,12 +121,19 @@
     if (self.audioPlayer.playing) { // another sound playin
         [self.audioPlayer pause];
     }
+    [self.activeCell.originalTimeline cancelAnimation];
+    [self.activeCell.mouthTimeline cancelAnimation];
     
     UIButton *buttonPessed = sender;
     YellinSoundRespondedCell *soundResponseCell = (YellinSoundRespondedCell *)buttonPessed.superview.superview;
+    self.activeCell = soundResponseCell;
+    
     PFObject *chirp = soundResponseCell.chirp;
     PFFile *mouthAudio = [chirp objectForKey:@"mouth_sound"];
     self.audioPlayer = [YellinAudioPlayer getConfiguredPlayerWithParseAudioFile:mouthAudio];
+    
+    soundResponseCell.mouthSoundLength = self.audioPlayer.duration;
+    [self.activeCell.mouthTimeline startAnimationofTotalSeconds:self.activeCell.mouthSoundLength];
     [self.audioPlayer play];
 }
 

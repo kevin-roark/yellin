@@ -20,4 +20,6 @@
 @property (nonatomic) BOOL nothingHere;
 @property (nonatomic, strong) UILabel *nothingHereLabel;
 
+@property (nonatomic, strong) YellinSoundRespondedCell *activeCell;
+
 @end

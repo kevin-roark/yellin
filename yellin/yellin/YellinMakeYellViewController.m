@@ -124,6 +124,16 @@
     }
 }
 
+- (void)updateMidPlayingStatusView:(NSTimer *)timer {
+    if (self.player.playing) {
+        [self.makeYellView updateRecordingLengthStatus:self.player.currentTime];
+    }
+    else if (timer && !self.player.playing) {
+        [timer invalidate];
+        timer = nil;
+    }
+}
+
 - (void)playButtonPressed {
     if (!self.recorder.recording) { // again just a safe-catch-all or whatever
         NSError *err;
@@ -133,6 +143,9 @@
         }
         else {
             self.player.delegate = self;
+            [NSTimer scheduledTimerWithTimeInterval:0.1
+                                             target:self selector:@selector(updateMidPlayingStatusView:)
+                                           userInfo:nil repeats:YES];
             [self.player play];
         }
     }
