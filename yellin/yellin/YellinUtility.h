@@ -23,4 +23,7 @@
 + (UIColor *)yellinGreen;
 + (UIColor *)lighterYellinGreen;
 
++ (UIColor *)sendColor;
++ (UIColor *)lighterSendColor;
+
 @end

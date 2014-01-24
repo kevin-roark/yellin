@@ -18,6 +18,7 @@
         self.sendButton.enabled = NO;
         self.playButton.enabled = YES;
         [self.playButton setTitle:@"play original sound" forState:UIControlStateNormal];
+        [self.sendButton setTitle:@"send to them" forState:UIControlStateNormal];
         
         self.recordButton.frame = CGRectOffset(self.recordButton.frame, 0, -30);
         

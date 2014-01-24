@@ -24,12 +24,21 @@
         self.recordButton.enabled = YES;
         [self addSubview:self.recordButton];
         
+        [self.recordButton addTarget:self action:@selector(recordButtonTouchdown) forControlEvents:UIControlEventTouchDown];
+        [self.recordButton addTarget:self action:@selector(recordButtonTouchup) forControlEvents:UIControlEventTouchUpOutside];
+        [self.recordButton addTarget:self action:@selector(recordButtonTouchup) forControlEvents:UIControlEventTouchUpInside];
+        
         self.playButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         self.playButton.frame = CGRectMake(20, self.frame.size.height - 25, self.frame.size.width - 40, 50);
         self.playButton.backgroundColor = [UIColor greenColor];
         self.playButton.tintColor = [UIColor whiteColor];
+        [self.playButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.playButton setTitle:@"play" forState:UIControlStateNormal];
         [self addSubview:self.playButton];
+        
+        [self.playButton addTarget:self action:@selector(playButtonTouchdown) forControlEvents:UIControlEventTouchDown];
+        [self.playButton addTarget:self action:@selector(playButtonTouchup) forControlEvents:UIControlEventTouchUpOutside];
+        [self.playButton addTarget:self action:@selector(playButtonTouchup) forControlEvents:UIControlEventTouchUpInside];
         
         self.sendButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         self.sendButton.frame = CGRectOffset(self.playButton.frame, 0, 60);
@@ -37,6 +46,10 @@
         self.sendButton.tintColor = [UIColor whiteColor];
         [self.sendButton setTitle:@"send to us" forState:UIControlStateNormal];
         [self addSubview:self.sendButton];
+        
+        [self.sendButton addTarget:self action:@selector(sendButtonTouchdown) forControlEvents:UIControlEventTouchDown];
+        [self.sendButton addTarget:self action:@selector(sendButtonTouchup) forControlEvents:UIControlEventTouchUpOutside];
+        [self.sendButton addTarget:self action:@selector(sendButtonTouchup) forControlEvents:UIControlEventTouchUpInside];
         
         self.recordingTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 80, self.frame.size.width - 20, 60)];
         self.recordingTimeLabel.textColor = [UIColor blackColor];
@@ -46,6 +59,30 @@
         [self addSubview:self.recordingTimeLabel];
     }
     return self;
+}
+
+- (void)playButtonTouchup {
+    self.backgroundColor = [UIColor whiteColor];
+}
+
+- (void)playButtonTouchdown {
+    self.backgroundColor = [YellinUtility lighterYellinGreen];
+}
+
+- (void)recordButtonTouchup {
+    self.backgroundColor = [UIColor whiteColor];
+}
+
+- (void)recordButtonTouchdown {
+    self.backgroundColor = [YellinUtility lighterRecordColor];
+}
+
+- (void)sendButtonTouchup {
+    self.backgroundColor = [UIColor whiteColor];
+}
+
+- (void)sendButtonTouchdown {
+    self.backgroundColor = [YellinUtility lighterSendColor];
 }
 
 - (void)addPostSoundButtons {

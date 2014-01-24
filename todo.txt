@@ -1,7 +1,6 @@
 TODO:
 
 * push notifcations
-* condition for nothing in table for second tab
 * decide what to do with chirps after mouth sound is heard
 * clean up design on tab 2
 * app icon
@@ -9,4 +8,4 @@ TODO:
 * feedback for user after recording sound
 * maybe decide ordering for chirps in tab 2
 * the about tab
-* highlight background color on recording tab when any button pressed
+* prevent button text from changing color maybe

@@ -41,7 +41,15 @@
 }
 
 + (UIColor *)lighterYellinGreen {
+    return [UIColor colorWithRed:0.4 green:1.0 blue:0.42 alpha:1];
+}
+
++ (UIColor *)sendColor {
     return nil;
+}
+
++ (UIColor *)lighterSendColor {
+    return [UIColor colorWithRed:0.97 green:0.6 blue:0.3 alpha:1];
 }
 
 @end

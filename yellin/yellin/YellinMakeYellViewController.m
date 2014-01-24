@@ -72,9 +72,7 @@
     if (self.player.playing) { // shouldn't happen, but doesn't hurt
         [self.player stop];
     }
-    
-    self.view.backgroundColor = [YellinUtility lighterRecordColor];
-    
+        
     if (!self.recorder.recording) { // again this should always be the case
         NSError *err;
         AVAudioSession *session = [AVAudioSession sharedInstance];
@@ -97,8 +95,6 @@
 
 - (void)recordButtonReleased {
     NSLog(@"record button released");
-    
-    self.view.backgroundColor = [UIColor whiteColor];
     
     CGFloat recordingLength = self.recorder.currentTime;
     [self.recorder stop];
