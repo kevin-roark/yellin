@@ -9,6 +9,8 @@
 extern float MAX_RECORDING_TIME;
 extern float MIN_RECORDING_TIME;
 
+extern int MAX_MOUTH_PLAYS;
+
 extern NSString *const CHIRP_PARSE_KEY;
 
 extern NSString *const KEVIN_USER_ID;

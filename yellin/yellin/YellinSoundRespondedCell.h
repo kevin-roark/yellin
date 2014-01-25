@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import <AVFoundation/AVFoundation.h>
 #import "YellinAudioTimelineView.h"
+#import "YellinConstants.h"
 
 @interface YellinSoundRespondedCell : UITableViewCell
 
@@ -29,8 +30,16 @@
 @property (nonatomic, strong) YellinAudioTimelineView *originalTimeline;
 @property (nonatomic, strong) YellinAudioTimelineView *mouthTimeline;
 
+@property (nonatomic, strong) UILabel *playsRemainingLabel;
+
+@property (nonatomic, strong) UIView *inactiveOverlay;
++ (UIColor *)inactiveColor;
+- (void)makeInactive;
+
 + (CGFloat)getHeight;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier chirpObject:(PFObject *)chirp;
+
+- (void)updateWithMouthPlays:(int)mouthPlays;
 
 @end

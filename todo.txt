@@ -1,11 +1,8 @@
 TODO:
 
 * push notifcations
-* decide what to do with chirps after mouth sound is heard
 * clean up design on tab 2
 * app icon
 * tab bar icons
 * feedback for user after recording sound
-* maybe decide ordering for chirps in tab 2
 * the about tab
-* prevent button text from changing color maybe

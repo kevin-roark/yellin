@@ -28,7 +28,7 @@
         [self.recordButton addTarget:self action:@selector(recordButtonTouchup) forControlEvents:UIControlEventTouchUpOutside];
         [self.recordButton addTarget:self action:@selector(recordButtonTouchup) forControlEvents:UIControlEventTouchUpInside];
         
-        self.playButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        self.playButton = [UIButton buttonWithType:UIButtonTypeCustom];
         self.playButton.frame = CGRectMake(20, self.frame.size.height - 25, self.frame.size.width - 40, 50);
         self.playButton.backgroundColor = [UIColor greenColor];
         self.playButton.tintColor = [UIColor whiteColor];
@@ -40,7 +40,7 @@
         [self.playButton addTarget:self action:@selector(playButtonTouchup) forControlEvents:UIControlEventTouchUpOutside];
         [self.playButton addTarget:self action:@selector(playButtonTouchup) forControlEvents:UIControlEventTouchUpInside];
         
-        self.sendButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        self.sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
         self.sendButton.frame = CGRectOffset(self.playButton.frame, 0, 60);
         self.sendButton.backgroundColor = [UIColor orangeColor];
         self.sendButton.tintColor = [UIColor whiteColor];

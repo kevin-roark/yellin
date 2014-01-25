@@ -19,7 +19,7 @@
     
     vc.parseClassName = CHIRP_PARSE_KEY;
     vc.pullToRefreshEnabled = YES;
-    vc.paginationEnabled = NO;
+    vc.paginationEnabled = YES;
     
     vc.tableView.separatorColor = [YellinUtility coolYellinColor];
     
@@ -49,6 +49,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.barTintColor = [YellinUtility coolYellinColor];
+    [self loadObjects];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -64,6 +65,10 @@
     //[query whereKey:@"has_mouth_sound" equalTo:[NSNumber numberWithBool:YES]];
     [query whereKey:@"from_user" equalTo:[PFUser currentUser]];
     [query includeKey:@"mouthing_user"]; // include data for us to show responder's name
+    
+    //[query orderByDescending:@"active_mouth_sound"];
+    //[query addDescendingOrder:@"respondedAt"];
+    [query addDescendingOrder:@"createdAt"];
     
     return query;
 }
@@ -124,18 +129,23 @@
     [self.activeCell.originalTimeline cancelAnimation];
     [self.activeCell.mouthTimeline cancelAnimation];
     
+    UIButton *buttonPessed = sender;
+    YellinSoundRespondedCell *soundResponseCell = (YellinSoundRespondedCell *)buttonPessed.superview.superview;
+    self.activeCell = soundResponseCell;
+    
     // update the chirp object
     if (![self.activeCell.chirp objectForKey:@"first_mouth_play_time"]) {
         [self.activeCell.chirp setObject:[NSDate date] forKey:@"first_mouth_play_time"];
     }
     NSNumber *currentMouthPlays = [self.activeCell.chirp objectForKey:@"mouth_plays"];
     int nextMouthPlays = [currentMouthPlays intValue] + 1;
+    [self.activeCell updateWithMouthPlays:nextMouthPlays];
     [self.activeCell.chirp setObject:[NSNumber numberWithInt:nextMouthPlays] forKey:@"mouth_plays"];
     [self.activeCell.chirp saveInBackground];
     
-    UIButton *buttonPessed = sender;
-    YellinSoundRespondedCell *soundResponseCell = (YellinSoundRespondedCell *)buttonPessed.superview.superview;
-    self.activeCell = soundResponseCell;
+    if (nextMouthPlays == MAX_MOUTH_PLAYS) {
+        [self.activeCell makeInactive];
+    }
     
     PFObject *chirp = soundResponseCell.chirp;
     PFFile *mouthAudio = [chirp objectForKey:@"mouth_sound"];

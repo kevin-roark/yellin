@@ -53,6 +53,7 @@
             NSLog(@"uploaded audio, updating chirp object");
             self.chirp[@"mouth_sound"] = audioFile;
             self.chirp[@"has_mouth_sound"] = [NSNumber numberWithBool:YES];
+            self.chirp[@"active_mouth_sound"] = [NSNumber numberWithBool:YES];
             self.chirp[@"mouthing_user"] = [PFUser currentUser];
             self.chirp[@"respondedAt"] = [NSDate date];
             [self.chirp saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {

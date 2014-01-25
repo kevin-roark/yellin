@@ -11,6 +11,8 @@
 float MAX_RECORDING_TIME = 3.0;
 float MIN_RECORDING_TIME = 0.2;
 
+int MAX_MOUTH_PLAYS = 5;
+
 NSString *const CHIRP_PARSE_KEY = @"Chirp";
 
 NSString *const KEVIN_USER_ID = @"jraEIgCzyq";
