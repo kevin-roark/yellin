@@ -150,7 +150,7 @@
     self.recordingTimeLabel.text = @"";
     self.uploadingLabel.text = @"ALL DONE!!";
     
-    [self performRevertAnimation];
+    [self performRevertAnimation];  
 }
 
 - (void)performRevertAnimation {

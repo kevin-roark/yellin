@@ -22,6 +22,7 @@
     vc.paginationEnabled = YES;
     
     vc.tableView.separatorColor = [YellinUtility coolYellinColor];
+    vc.view.backgroundColor = [UIColor colorWithRed:0.9 green:0.4 blue:0.8 alpha:1];
     
     return vc;
 }
@@ -52,11 +53,27 @@
     [self loadObjects];
 }
 
+- (PFTableViewCell *)tableView:(UITableView *)tableView cellForNextPageAtIndexPath:(NSIndexPath *)indexPath {
+    PFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"nextpage"];
+    if (!cell) {
+        cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"nextpage"];
+        cell.textLabel.text = @"look at more sounds Lol!";
+        cell.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.3 alpha:1.0];
+        cell.textLabel.textColor = [UIColor darkGrayColor];
+        cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    return cell;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [YellinSoundRespondedCell getHeight];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 0.00000001;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 0.00000001;
 }
 
