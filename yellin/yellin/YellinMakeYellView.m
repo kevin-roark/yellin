@@ -51,38 +51,51 @@
         [self.sendButton addTarget:self action:@selector(sendButtonTouchup) forControlEvents:UIControlEventTouchUpOutside];
         [self.sendButton addTarget:self action:@selector(sendButtonTouchup) forControlEvents:UIControlEventTouchUpInside];
         
-        self.recordingTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 80, self.frame.size.width - 20, 60)];
+        self.recordingTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 110, self.frame.size.width - 20, 60)];
         self.recordingTimeLabel.textColor = [UIColor blackColor];
         self.recordingTimeLabel.textAlignment = NSTextAlignmentCenter;
         self.recordingTimeLabel.font = [UIFont fontWithName:@"Helvetica" size:40.0];
         self.recordingTimeLabel.text = @"";
         [self addSubview:self.recordingTimeLabel];
+        
+        self.uploadingLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 40, self.frame.size.width - 20, 100)];
+        self.uploadingLabel.textColor = [YellinUtility getRandomColor];
+        self.uploadingLabel.text = @"creating ur yell ...";
+        self.uploadingLabel.font = [UIFont fontWithName:@"Helvetica" size:35.0];
+        self.uploadingLabel.numberOfLines = 0;
+        self.uploadingLabel.textAlignment = NSTextAlignmentCenter;
     }
     return self;
 }
 
 - (void)playButtonTouchup {
     self.backgroundColor = [UIColor whiteColor];
+    self.recordingTimeLabel.textColor = [UIColor blackColor];
 }
 
 - (void)playButtonTouchdown {
     self.backgroundColor = [YellinUtility lighterYellinGreen];
+    self.recordingTimeLabel.textColor = [UIColor whiteColor];
 }
 
 - (void)recordButtonTouchup {
     self.backgroundColor = [UIColor whiteColor];
+    self.recordingTimeLabel.textColor = [UIColor blackColor];
 }
 
 - (void)recordButtonTouchdown {
     self.backgroundColor = [YellinUtility lighterRecordColor];
+    self.recordingTimeLabel.textColor = [UIColor whiteColor];
 }
 
 - (void)sendButtonTouchup {
     self.backgroundColor = [UIColor whiteColor];
+    self.recordingTimeLabel.textColor = [UIColor blackColor];
 }
 
 - (void)sendButtonTouchdown {
     self.backgroundColor = [YellinUtility lighterSendColor];
+    self.recordingTimeLabel.textColor = [UIColor whiteColor];
 }
 
 - (void)addPostSoundButtons {
@@ -93,6 +106,31 @@
 - (void)removePostSoundButtons {
     //[self.playButton removeFromSuperview];
     //[self.sendButton removeFromSuperview];
+}
+
+- (void)setToUploading:(BOOL)wantUploading {
+    if (wantUploading) {
+        [self addSubview:self.uploadingLabel];
+        self.uploadingTimer = [NSTimer scheduledTimerWithTimeInterval:0.28
+            target:self selector:@selector(updateUploadingView) userInfo:nil repeats:YES];
+    } else {
+        //[self.uploadingLabel removeFromSuperview];
+        [self.uploadingTimer invalidate];
+        self.uploadingTimer = nil;
+    }
+}
+
+- (void)updateUploadingView {
+    static BOOL goingRight = YES;
+    self.uploadingLabel.textColor = [YellinUtility getRandomColor];
+    [UIView animateWithDuration:self.uploadingTimer.timeInterval animations:^{
+        if (goingRight) {
+            self.uploadingLabel.frame = CGRectOffset(self.uploadingLabel.frame, 3, 0);
+        } else {
+            self.uploadingLabel.frame = CGRectOffset(self.uploadingLabel.frame, -3, 0);
+        }
+    }];
+    goingRight = !goingRight;
 }
 
 - (void)animateRecordButtonUpWithDuration:(CGFloat)duration {
@@ -110,14 +148,23 @@
 - (void)revertToOriginalState {
     self.performedInitialAnimation = NO;
     self.recordingTimeLabel.text = @"";
+    self.uploadingLabel.text = @"ALL DONE!!";
     
+    [self performRevertAnimation];
+}
+
+- (void)performRevertAnimation {
     [UIView animateWithDuration:1.0 animations:^{
         // animation block
         self.recordButton.frame = CGRectOffset(self.recordButton.frame, 0, 150);
         self.playButton.frame = CGRectOffset(self.playButton.frame, 0, 150);
         self.sendButton.frame = CGRectOffset(self.sendButton.frame, 0, 150);
+        self.uploadingLabel.alpha = 0.0;
     } completion:^(BOOL finished) {
         // completion block
+        self.uploadingLabel.text = @"creating ur yell ...";
+        self.uploadingLabel.alpha = 1.0;
+        [self.uploadingLabel removeFromSuperview];
     }];
 }
 

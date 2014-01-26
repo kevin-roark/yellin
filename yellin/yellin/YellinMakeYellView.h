@@ -18,6 +18,8 @@
 
 @property (nonatomic, strong) UILabel *recordingTimeLabel;
 
+@property (nonatomic, strong) UILabel *uploadingLabel;
+
 @property (nonatomic) BOOL performedInitialAnimation;
 
 - (void) addPostSoundButtons;
@@ -27,6 +29,10 @@
 
 - (void) updateRecordingLengthStatus:(NSTimeInterval)currentLength;
 
-- (void)revertToOriginalState;
+@property (nonatomic, strong) NSTimer *uploadingTimer;
+- (void) setToUploading:(BOOL)wantUploading;
+- (void) updateUploadingView;
+
+- (void) revertToOriginalState;
 
 @end

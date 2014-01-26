@@ -115,6 +115,7 @@
         else {
             [timer invalidate];
             timer = nil;
+            self.makeYellView.backgroundColor = [UIColor whiteColor];
             [self recordButtonReleased];
         }
     }
@@ -153,6 +154,8 @@
 
 - (void)sendButtonPressed {
     NSLog(@"send button pressed");
+    [self.makeYellView setToUploading:YES];
+    
     NSData *audioData = [NSData dataWithContentsOfURL:self.recorder.url];
     PFFile *audioFile = [PFFile fileWithData:audioData];
     [audioFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -167,6 +170,7 @@
             [chirp saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if (!error) {
                     NSLog(@"created chirp objectttt");
+                    [self.makeYellView setToUploading:NO];
                     [self.makeYellView revertToOriginalState];
                 }
                 else {

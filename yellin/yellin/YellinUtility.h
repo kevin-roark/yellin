@@ -15,6 +15,8 @@
 
 + (UILabel *)getTitleLabel:(NSString *)title;
 
++ (UIColor *)getRandomColor;
+
 + (UIColor *)coolYellinColor;
 + (UIColor *)warmYellinColor;
 + (UIColor *)aboutYellinColor;

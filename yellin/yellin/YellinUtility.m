@@ -24,6 +24,15 @@
     return returnLabel;
 }
 
++ (UIColor *)getRandomColor {
+    CGFloat red = (arc4random() % 256) / 256.0; // 0.0 -> 1.0
+    CGFloat green = (arc4random() % 256) / 256.0; // 0.0 -> 1.0
+    CGFloat blue = (arc4random() % 256) / 256.0; // 0.0 -> 1.0;
+    
+    UIColor *c = [UIColor colorWithRed:red green:green blue:blue alpha:1];
+    return c;
+}
+
 + (UIColor *)coolYellinColor {
     return [UIColor colorWithRed:0.8 green:0.3 blue:0.3 alpha:1];
 }

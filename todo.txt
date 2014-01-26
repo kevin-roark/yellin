@@ -4,5 +4,3 @@ TODO:
 * clean up design on tab 2
 * app icon
 * tab bar icons
-* feedback for user after recording sound
-* the about tab
