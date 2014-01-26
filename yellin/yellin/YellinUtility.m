@@ -32,6 +32,10 @@
     return [UIColor colorWithRed:0.3 green:0.3 blue:0.8 alpha:1];
 }
 
++ (UIColor *)aboutYellinColor {
+    return [UIColor colorWithRed:0.8 green:0.8 blue:0.3 alpha:1];
+}
+
 + (UIColor *)lighterRecordColor {
     return [UIColor colorWithRed:1.0 green:0.4 blue:0.42 alpha:1];
 }

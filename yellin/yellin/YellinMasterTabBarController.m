@@ -36,6 +36,13 @@
     mouthSoundsNVC.navigationBarHidden = NO;
     [tabs addObject:mouthSoundsNVC];
     
+    // make about tab view
+    YellinAboutTabViewController *aboutVC = [[YellinAboutTabViewController alloc] init];
+    YellinNavigationViewController *aboutNVC = [[YellinNavigationViewController alloc] initWithRootViewController:aboutVC];
+    aboutNVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"about" image:nil selectedImage:nil];
+    aboutNVC.navigationBarHidden = NO;
+    [tabs addObject:aboutNVC];
+    
     // here do something to see if user is one of the "chosen few"
     if ([PFUser currentUser] // user logged in
         && [[YellinUtility theChosenFew] containsObject:[PFUser currentUser].objectId]) { // and is one of us

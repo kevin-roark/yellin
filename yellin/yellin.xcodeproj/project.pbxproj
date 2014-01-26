@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FB1F7F6318931B59007B00DA /* YellinAudioTimelineView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1F7F6218931B59007B00DA /* YellinAudioTimelineView.m */; };
+		FB1F7F691895AAB8007B00DA /* YellinAboutTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1F7F681895AAB8007B00DA /* YellinAboutTabViewController.m */; };
 		FB201A62188E301200059C5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201A61188E301200059C5D /* Foundation.framework */; };
 		FB201A64188E301200059C5D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201A63188E301200059C5D /* CoreGraphics.framework */; };
 		FB201A66188E301200059C5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201A65188E301200059C5D /* UIKit.framework */; };
@@ -64,6 +65,8 @@
 /* Begin PBXFileReference section */
 		FB1F7F6118931B59007B00DA /* YellinAudioTimelineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinAudioTimelineView.h; sourceTree = "<group>"; };
 		FB1F7F6218931B59007B00DA /* YellinAudioTimelineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinAudioTimelineView.m; sourceTree = "<group>"; };
+		FB1F7F671895AAB8007B00DA /* YellinAboutTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinAboutTabViewController.h; sourceTree = "<group>"; };
+		FB1F7F681895AAB8007B00DA /* YellinAboutTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinAboutTabViewController.m; sourceTree = "<group>"; };
 		FB201A5E188E301200059C5D /* yellin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yellin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB201A61188E301200059C5D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB201A63188E301200059C5D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -264,6 +267,8 @@
 				FB201AA0188E37FE00059C5D /* YellinMouthSoundsViewController.m */,
 				FB201AE318904E6800059C5D /* YellinMakeMouthSoundViewController.h */,
 				FB201AE418904E6800059C5D /* YellinMakeMouthSoundViewController.m */,
+				FB1F7F671895AAB8007B00DA /* YellinAboutTabViewController.h */,
+				FB1F7F681895AAB8007B00DA /* YellinAboutTabViewController.m */,
 			);
 			name = TabControllers;
 			sourceTree = "<group>";
@@ -439,6 +444,7 @@
 				FB201AE518904E6800059C5D /* YellinMakeMouthSoundViewController.m in Sources */,
 				FB201AF218908DFE00059C5D /* YellinRespondToChirpViewController.m in Sources */,
 				FB201AFD1890C01E00059C5D /* YellinAudioPlayer.m in Sources */,
+				FB1F7F691895AAB8007B00DA /* YellinAboutTabViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

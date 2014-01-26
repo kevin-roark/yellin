@@ -13,6 +13,7 @@
 #import "YellinMakeYellViewController.h"
 #import "YellinMouthSoundsViewController.h"
 #import "YellinMakeMouthSoundViewController.h"
+#import "YellinAboutTabViewController.h"
 
 @interface YellinMasterTabBarController : UITabBarController
 
