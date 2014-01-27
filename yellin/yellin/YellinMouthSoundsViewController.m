@@ -83,6 +83,11 @@
     [query whereKey:@"from_user" equalTo:[PFUser currentUser]];
     [query includeKey:@"mouthing_user"]; // include data for us to show responder's name
     
+    // set up cache if necessary, makes things happen on no network
+    if (self.objects.count == 0) {
+        query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    }
+    
     //[query orderByDescending:@"active_mouth_sound"];
     //[query addDescendingOrder:@"respondedAt"];
     [query addDescendingOrder:@"createdAt"];
