@@ -3,4 +3,4 @@ TODO:
 * push notifcations
 * clean up design on tab 2
 * app icon
-* tab bar icons
+* tab bar icons 

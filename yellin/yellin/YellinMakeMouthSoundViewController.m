@@ -28,6 +28,18 @@
     [super viewDidLoad];
 	
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    UIView *tableHeader = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 20)];
+    tableHeader.backgroundColor = [UIColor orangeColor];
+    
+    self.yellsTodoLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, tableHeader.frame.size.width - 15, tableHeader.frame.size.height)];
+    self.yellsTodoLabel.text = @"yells to do";
+    self.yellsTodoLabel.textColor = [UIColor blueColor];
+    self.yellsTodoLabel.font = [UIFont fontWithName:@"Helvetica" size:18];
+    self.yellsTodoLabel.textAlignment = NSTextAlignmentCenter;
+    [tableHeader addSubview:self.yellsTodoLabel];
+    
+    self.tableView.tableHeaderView = tableHeader;
 }
 
 - (PFQuery *)queryForTable {
@@ -35,6 +47,17 @@
     [query whereKey:@"has_mouth_sound" equalTo:[NSNumber numberWithBool:NO]];
     
     return query;
+}
+
+- (void)objectsDidLoad:(NSError *)error {
+    [super objectsDidLoad:error];
+    NSUInteger numObjects = [self.objects count];
+    self.yellsTodoLabel.text = [NSString stringWithFormat:@"%lu yells to do", (unsigned long)numObjects];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self loadObjects];
 }
 
 //- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

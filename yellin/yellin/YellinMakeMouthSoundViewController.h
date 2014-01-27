@@ -15,4 +15,6 @@
 
 @interface YellinMakeMouthSoundViewController : PFQueryTableViewController
 
+@property (nonatomic, strong) UILabel *yellsTodoLabel;
+
 @end
