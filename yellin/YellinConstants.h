@@ -11,6 +11,9 @@ extern float MIN_RECORDING_TIME;
 
 extern int MAX_MOUTH_PLAYS;
 
+extern NSString *const PARSE_APPLICATION_ID;
+extern NSString *const PARSE_CLIENT_KEY;
+
 extern NSString *const CHIRP_PARSE_KEY;
 
 extern NSString *const KEVIN_USER_ID;

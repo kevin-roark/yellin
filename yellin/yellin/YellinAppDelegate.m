@@ -10,10 +10,6 @@
 
 @implementation YellinAppDelegate
 
-#define PARSE_APPLICATION_ID @"wlUxgDnv10baqrdV8cs5lCwva3V6n3IMuHVOmxdA"
-#define PARSE_CLIENT_KEY     @"AzHkvrwtwADFpBXg519aHx3BJM1mWpzYWOqQxQin"
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [Parse setApplicationId:PARSE_APPLICATION_ID

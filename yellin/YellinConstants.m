@@ -13,6 +13,9 @@ float MIN_RECORDING_TIME = 0.2;
 
 int MAX_MOUTH_PLAYS = 5;
 
+NSString *const PARSE_APPLICATION_ID = @"wlUxgDnv10baqrdV8cs5lCwva3V6n3IMuHVOmxdA";
+NSString *const PARSE_CLIENT_KEY = @"AzHkvrwtwADFpBXg519aHx3BJM1mWpzYWOqQxQin";
+
 NSString *const CHIRP_PARSE_KEY = @"Chirp";
 
 NSString *const KEVIN_USER_ID = @"jraEIgCzyq";
