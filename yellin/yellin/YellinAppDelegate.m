@@ -22,22 +22,16 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     // make the tab stuff
-    YellinMasterTabBarController *tabBar = [YellinMasterTabBarController generateMainScreen];
+    self.master = [YellinMasterTabBarController generateMainScreen];
     
     // see if we opened from a push
     NSDictionary *notificationPayload = launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey];
     if (notificationPayload) {
-        NSString *activeTab = notificationPayload[@"initialView"];
-        if ([activeTab isEqualToString:MOUTH_SOUNDS_TAB]) {
-            tabBar.selectedViewController = [tabBar.viewControllers objectAtIndex:1]; // second tab is mouth sounds
-        }
-        else if ([activeTab isEqualToString:MOUTH_RESPONSE_TAB]) {
-            tabBar.selectedViewController = [tabBar.viewControllers objectAtIndex:3]; // last tab is our response tab
-        }
+        [self setActiveTabFromPushNotificationData:notificationPayload];
     }
     
     // boilerplate
-    self.navigationController = [[YellinNavigationViewController alloc] initWithRootViewController:tabBar];
+    self.navigationController = [[YellinNavigationViewController alloc] initWithRootViewController:self.master];
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     
@@ -50,17 +44,28 @@
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     // save this damn device that wants push notifications
     
-    //PFInstallation *currentInstallation = [PFInstallation currentInstallation];
-    //[currentInstallation setDeviceTokenFromData:deviceToken];
-    //[currentInstallation saveInBackground];
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     // handle a push notification while the app is active
     
-    //[PFPush handlePush:userInfo];
+    [PFPush handlePush:userInfo];
+    //[self setActiveTabFromPushNotificationData:userInfo];
 }
-							
+
+- (void)setActiveTabFromPushNotificationData:(NSDictionary *)pushData {
+    NSString *activeTab = pushData[@"initialView"];
+    if ([activeTab isEqualToString:MOUTH_SOUNDS_TAB]) {
+        self.master.selectedViewController = [self.master.viewControllers objectAtIndex:1]; // second tab is mouth sounds
+    }
+    else if ([activeTab isEqualToString:MOUTH_RESPONSE_TAB]) {
+        self.master.selectedViewController = [self.master.viewControllers objectAtIndex:3]; // last tab is our response tab
+    }
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

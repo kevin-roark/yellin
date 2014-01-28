@@ -18,4 +18,6 @@
 
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
 
+@property (nonatomic, strong) YellinMasterTabBarController *master;
+
 @end
