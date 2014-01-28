@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIdentifier</key>
-	<string>edu.kevinroark.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.millersfantasy.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -34,7 +34,7 @@
 	<key>FacebookAppID</key>
 	<string>1456043177950397</string>
 	<key>FacebookDisplayName</key>
-	<string>yelling</string>
+	<string>yellin</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>
