@@ -172,6 +172,14 @@
                     NSLog(@"created chirp objectttt");
                     [self.makeYellView setToUploading:NO];
                     [self.makeYellView revertToOriginalState];
+                    
+                    // should send a push notification to us
+                    //PFQuery *pushQuery = [PFInstallation query];
+                    //[pushQuery whereKey:@"user" containedIn:[[YellinUtility theChosenFew] allObjects]];
+                    //PFPush *godPush = [[PFPush alloc] init];
+                    //[godPush setQuery:pushQuery];
+                    //[godPush setMessage:[NSString stringWithFormat:@"new yell from: %@", [[PFUser currentUser] objectForKey:@"name"]]];
+                    //[godPush sendPushInBackground];
                 }
                 else {
                     NSLog(@"failed to create chirp: %@", [error localizedDescription]);

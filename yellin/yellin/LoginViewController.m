@@ -51,7 +51,11 @@
                     NSDictionary *userData = (NSDictionary *)result;
                     NSLog(@"%@", userData[@"name"]);
                     user[@"name"] = userData[@"name"];
+                    user[@"installation"] = [PFInstallation currentInstallation];
+                    user[@"is_god"] = [NSNumber numberWithBool:NO];
                     [user saveInBackground];
+                    [[PFInstallation currentInstallation] setObject:user forKey:@"user"];
+                    [[PFInstallation currentInstallation] saveInBackground];
                 }
                 else {
                     NSLog(@"error with facebook request: %@", [error localizedDescription]);
