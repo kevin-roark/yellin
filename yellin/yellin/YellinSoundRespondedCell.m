@@ -23,14 +23,14 @@
         self.playOriginalButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         self.playOriginalButton.frame = CGRectMake(18.0, 6.0, 117.0, 40);
         self.playOriginalButton.tintColor = [UIColor whiteColor];
-        self.playOriginalButton.backgroundColor = [UIColor orangeColor];
+        self.playOriginalButton.backgroundColor = [YellinSoundRespondedCell originalButtonColor];
         [self.playOriginalButton setTitle:@"ur's" forState:UIControlStateNormal];
         [self addSubview:self.playOriginalButton];
         
         self.playMouthButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         self.playMouthButton.frame = CGRectMake(self.playOriginalButton.frame.origin.x + self.playOriginalButton.frame.size.width + 6, 6.0, 117.0, 40);
         self.playMouthButton.tintColor = [UIColor whiteColor];
-        self.playMouthButton.backgroundColor = [UIColor greenColor];
+        self.playMouthButton.backgroundColor = [YellinSoundRespondedCell mouthButtonColor];
         [self.playMouthButton setTitle:@"mouth's" forState:UIControlStateNormal];
         
         self.originalTimeline = [[YellinAudioTimelineView alloc]
@@ -158,7 +158,15 @@
 }
 
 + (UIColor *)noMouthColor {
-    return [UIColor colorWithRed:0.95 green:0.92 blue:0.92 alpha:1];
+    return [UIColor colorWithRed:0.9 green:0.96 blue:0.9 alpha:1];
+}
+
++ (UIColor *)originalButtonColor {
+    return [UIColor colorWithRed:1 green:0.65 blue:0.3 alpha:1];
+}
+
++ (UIColor *)mouthButtonColor {
+    return [UIColor colorWithRed:0.4 green:0.5 blue:1 alpha:1];
 }
 
 + (CGFloat)getHeight {
