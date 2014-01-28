@@ -60,6 +60,20 @@
                 if (!error) {
                     NSLog(@"updated chirp objectttt");
                     
+                    // send push notification to user
+                    //PFQuery *pushQuery = [PFInstallation query];
+                    //[pushQuery whereKey:@"user" equalTo:[self.chirp objectForKey:@"from_user"]];
+                    //NSDictionary *pushData = @{
+                    //    @"alert": @"u got a new mouth sound !!",
+                    //    @"badge": @"Increment",
+                    //    @"initialView": MOUTH_SOUNDS_TAB
+                    //};
+                    //PFPush *responsePush = [[PFPush alloc] init];
+                    //[responsePush setQuery:pushQuery];
+                    //[responsePush setData:pushData];
+                    //[responsePush sendPushInBackground];
+                    
+                    // display alert to us
                     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Got ur mouth sound"
                                                               message:@"Its in there"
                                                               delegate:self

@@ -16,3 +16,6 @@ extern NSString *const CHIRP_PARSE_KEY;
 extern NSString *const KEVIN_USER_ID;
 extern NSString *const DYLAN_USER_ID;
 extern NSString *const HENRY_USER_ID;
+
+extern NSString *const MOUTH_SOUNDS_TAB;
+extern NSString *const MOUTH_RESPONSE_TAB;

@@ -21,13 +21,27 @@
     [PFFacebookUtils initializeFacebook];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
+    // make the tab stuff
     YellinMasterTabBarController *tabBar = [YellinMasterTabBarController generateMainScreen];
     
-    self.navigationController = [[YellinNavigationViewController alloc] initWithRootViewController:tabBar];
+    // see if we opened from a push
+    NSDictionary *notificationPayload = launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey];
+    if (notificationPayload) {
+        NSString *activeTab = notificationPayload[@"initialView"];
+        if ([activeTab isEqualToString:MOUTH_SOUNDS_TAB]) {
+            tabBar.selectedViewController = [tabBar.viewControllers objectAtIndex:1]; // second tab is mouth sounds
+        }
+        else if ([activeTab isEqualToString:MOUTH_RESPONSE_TAB]) {
+            tabBar.selectedViewController = [tabBar.viewControllers objectAtIndex:3]; // last tab is our response tab
+        }
+    }
     
+    // boilerplate
+    self.navigationController = [[YellinNavigationViewController alloc] initWithRootViewController:tabBar];
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     
+    // register for notifications
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
     
     return YES;
@@ -64,6 +78,12 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     [FBAppCall handleDidBecomeActiveWithSession:[PFFacebookUtils session]];
+    
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    if (currentInstallation.badge != 0) {
+        currentInstallation.badge = 0;
+        [currentInstallation saveEventually];
+    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

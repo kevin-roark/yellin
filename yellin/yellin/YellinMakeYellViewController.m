@@ -17,13 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //self.navigationItem.titleView = [YellinUtility getTitleLabel:@"record a sound"];
-    //[self.navigationItem.titleView sizeToFit];
-    //self.navigationItem.title = @"record a sound";
-    
     self.makeYellView = [[YellinMakeYellView alloc] initWithFrame:self.view.frame];
     
-    [UINavigationBar appearance].barTintColor = [YellinUtility warmYellinColor];
+    self.navigationController.navigationBar.barTintColor = [YellinUtility warmYellinColor];
     self.navigationItem.titleView = [YellinUtility getTitleLabel:@"record a sound"];
     [self.navigationItem.titleView sizeToFit];
     
@@ -176,9 +172,14 @@
                     // should send a push notification to us
                     //PFQuery *pushQuery = [PFInstallation query];
                     //[pushQuery whereKey:@"user" containedIn:[[YellinUtility theChosenFew] allObjects]];
+                    //NSDictionary *pushData = @{
+                    //    @"alert":[NSString stringWithFormat:@"new yell from: %@", [[PFUser currentUser] objectForKey:@"name"]],
+                    //    @"badge": @"Increment",
+                    //    @"initialView": MOUTH_RESPONSE_TAB
+                    //};
                     //PFPush *godPush = [[PFPush alloc] init];
                     //[godPush setQuery:pushQuery];
-                    //[godPush setMessage:[NSString stringWithFormat:@"new yell from: %@", [[PFUser currentUser] objectForKey:@"name"]]];
+                    //[godPush setData:pushData];
                     //[godPush sendPushInBackground];
                 }
                 else {

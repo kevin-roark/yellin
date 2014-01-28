@@ -30,7 +30,7 @@
         self.playMouthButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         self.playMouthButton.frame = CGRectMake(self.playOriginalButton.frame.origin.x + self.playOriginalButton.frame.size.width + 6, 6.0, 117.0, 40);
         self.playMouthButton.tintColor = [UIColor whiteColor];
-        self.playMouthButton.backgroundColor = [YellinSoundRespondedCell mouthButtonColor];
+        self.playMouthButton.backgroundColor = [YellinSoundRespondedCell mouthButtonColor]; 
         [self.playMouthButton setTitle:@"mouth's" forState:UIControlStateNormal];
         
         self.originalTimeline = [[YellinAudioTimelineView alloc]
