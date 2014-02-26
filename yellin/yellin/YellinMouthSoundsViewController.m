@@ -24,6 +24,14 @@
     vc.tableView.separatorColor = [YellinUtility coolYellinColor];
     vc.view.backgroundColor = [UIColor colorWithRed:0.9 green:0.4 blue:0.8 alpha:1];
     
+    // Setup audio session for playing
+    NSError *err;
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setCategory:AVAudioSessionCategoryPlayback error:&err];
+    if (err) {
+        NSLog(@"Error setting playback: %@", [err localizedDescription]);
+    }
+    
     return vc;
 }
 

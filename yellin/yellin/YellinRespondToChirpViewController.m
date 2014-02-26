@@ -114,6 +114,14 @@
 - (void)playMouthSoundButtonPressed {
     if (!self.recorder.recording) { // again just a safe-catch-all or whatever
         NSError *err;
+        
+        // Setup audio session for playing
+        AVAudioSession *session = [AVAudioSession sharedInstance];
+        [session setCategory:AVAudioSessionCategoryPlayback error:&err];
+        if (err) {
+            NSLog(@"Error setting playback: %@", [err localizedDescription]);
+        }
+        
         self.mouthPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:self.recorder.url error:&err];
         if (err) {
             NSLog(@"Error: %@", [err localizedDescription]);
@@ -127,6 +135,14 @@
 
 - (void)recordButtonPressed {
     NSLog(@"record button pressed oh yeah");
+    
+    // Setup audio session for recording
+    NSError *err;
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setCategory:AVAudioSessionCategoryPlayAndRecord error:&err];
+    if (err) {
+        NSLog(@"Error setting playback: %@", [err localizedDescription]);
+    }
     
     if (self.originalPlayer.playing) { // shouldn't happen, but doesn't hurt
         [self.originalPlayer stop];
@@ -154,6 +170,14 @@
 - (void)recordButtonReleased {
     NSLog(@"record button released");
     [self.recorder stop];
+    
+    // Setup audio session for playing
+    NSError *err;
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setCategory:AVAudioSessionCategoryPlayback error:&err];
+    if (err) {
+        NSLog(@"Error setting playback: %@", [err localizedDescription]);
+    }
     
     // in the future would be cool to change to 'pause' ala vine so that u can compose
     // sound from multiple places u know but pause doesn't set off the finished recording event

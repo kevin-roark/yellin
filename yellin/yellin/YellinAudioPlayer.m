@@ -18,11 +18,20 @@
         NSLog(@"erorr loading audio data from parse: %@", [err localizedDescription]);
     }
     err = nil;
+    
+    // Setup audio session for playing
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setCategory:AVAudioSessionCategoryPlayback error:&err];
+    if (err) {
+        NSLog(@"Error setting playback: %@", [err localizedDescription]);
+    }
+    
     YellinAudioPlayer *player = [[YellinAudioPlayer alloc] initWithData:originalAudioData error:&err];
     if (err) {
         NSLog(@"Error making original sound player: %@", [err localizedDescription]);
         return nil;
     }
+    [player setVolume:1.0];
     return player;
 }
 

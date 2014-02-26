@@ -18,9 +18,14 @@
                                nil];
     NSURL *outputFileURL = [NSURL fileURLWithPathComponents:pathComponents];
     
-    // Setup audio session
+    NSError *err;
+    
+    // Setup audio session for recording
     AVAudioSession *session = [AVAudioSession sharedInstance];
-    [session setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+    [session setCategory:AVAudioSessionCategoryPlayAndRecord error:&err];
+    if (err) {
+        NSLog(@"Error setting playback: %@", [err localizedDescription]);
+    }
     
     // Define the recorder setting
     NSMutableDictionary *recordSetting = [[NSMutableDictionary alloc] init];
@@ -29,7 +34,6 @@
     [recordSetting setValue:[NSNumber numberWithInt: 2] forKey:AVNumberOfChannelsKey];
     
     // Initiate and prepare the recorder
-    NSError *err;
     YellinAudioRecorder *recorder = [[YellinAudioRecorder alloc] initWithURL:outputFileURL settings:recordSetting error:&err];
     if (err) {
         NSLog(@"Error: %@", [err localizedDescription]);
