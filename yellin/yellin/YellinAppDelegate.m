@@ -17,8 +17,12 @@
     [PFFacebookUtils initializeFacebook];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
+    NSLog(@"got past parse stuff");
+        
     // make the tab stuff
     self.master = [YellinMasterTabBarController generateMainScreen];
+    
+    NSLog(@"made main screen");
     
     // see if we opened from a push
     NSDictionary *notificationPayload = launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey];
@@ -26,13 +30,19 @@
         [self setActiveTabFromPushNotificationData:notificationPayload];
     }
     
+    NSLog(@"got to push");
+    
     // boilerplate
     self.navigationController = [[YellinNavigationViewController alloc] initWithRootViewController:self.master];
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     
+    NSLog(@"got past boilerplate");
+    
     // register for notifications
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
+    
+    NSLog(@"registred for remotes");
     
     return YES;
 }
@@ -41,6 +51,10 @@
     // save this damn device that wants push notifications
     
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    if ([PFUser currentUser]) {
+        [currentInstallation setObject:[PFUser currentUser] forKey:@"user"];
+        [currentInstallation setObject:[[PFUser currentUser] objectId] forKey:@"userID"];
+    }
     [currentInstallation setDeviceTokenFromData:deviceToken];
     [currentInstallation saveInBackground];
 }

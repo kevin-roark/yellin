@@ -45,6 +45,7 @@
     if (![PFUser currentUser] || ![PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
         NSLog(@"user not logged in");
         LoginViewController *loginVC = [[LoginViewController alloc] init];
+        loginVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:loginVC animated:NO];
     }
     else {
@@ -170,17 +171,21 @@
                     [self.makeYellView revertToOriginalState];
                     
                     // should send a push notification to us
-                    //PFQuery *pushQuery = [PFInstallation query];
-                    //[pushQuery whereKey:@"user" containedIn:[[YellinUtility theChosenFew] allObjects]];
-                    //NSDictionary *pushData = @{
-                    //    @"alert":[NSString stringWithFormat:@"new yell from: %@", [[PFUser currentUser] objectForKey:@"name"]],
-                    //    @"badge": @"Increment",
-                    //    @"initialView": MOUTH_RESPONSE_TAB
-                    //};
-                    //PFPush *godPush = [[PFPush alloc] init];
-                    //[godPush setQuery:pushQuery];
-                    //[godPush setData:pushData];
-                    //[godPush sendPushInBackground];
+                    PFQuery *pushQuery = [PFInstallation query];
+                    [pushQuery whereKey:@"userID" containedIn:[[YellinUtility theChosenFew] allObjects]];
+                    NSLog(@"yellin utility as array: %@", [[YellinUtility theChosenFew] allObjects]);
+                    
+                    NSDictionary *pushData = @{
+                        @"alert":[NSString stringWithFormat:@"new yell from: %@", [[PFUser currentUser] objectForKey:@"name"]],
+                        @"badge": @"Increment",
+                        @"initialView": MOUTH_RESPONSE_TAB
+                    };
+                    PFPush *godPush = [[PFPush alloc] init];
+                    [godPush setQuery:pushQuery];
+                    [godPush setData:pushData];
+                    [godPush sendPushInBackground];
+                    
+                    NSLog(@"sent push to gods");
                 }
                 else {
                     NSLog(@"failed to create chirp: %@", [error localizedDescription]);

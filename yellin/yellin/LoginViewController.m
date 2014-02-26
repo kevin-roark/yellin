@@ -20,6 +20,8 @@
     NSLog(@"loading login view controller");
     self.view.backgroundColor = [UIColor whiteColor];
     
+    [self.navigationItem setHidesBackButton:YES];
+    
     UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     loginButton.frame = CGRectMake(20, 100, self.view.frame.size.width - 40, 50);
     loginButton.tintColor = [UIColor whiteColor];
@@ -55,6 +57,7 @@
                     user[@"is_god"] = [NSNumber numberWithBool:NO];
                     [user saveInBackground];
                     [[PFInstallation currentInstallation] setObject:user forKey:@"user"];
+                    [[PFInstallation currentInstallation] setObject:[user objectId] forKey:@"userID"];
                     [[PFInstallation currentInstallation] saveInBackground];
                 }
                 else {
@@ -62,12 +65,25 @@
                 }
             }];
             
-            [self.navigationController popViewControllerAnimated:YES]; // go back to tabs
+            [self goToMainTabs];
         } else {
             NSLog(@"User with facebook logged in!");
-            [self.navigationController popViewControllerAnimated:YES]; // go back to tabs
+            user[@"installation"] = [PFInstallation currentInstallation];
+            [user saveInBackground];
+            [[PFInstallation currentInstallation] setObject:user forKey:@"user"];
+            [[PFInstallation currentInstallation] setObject:[user objectId] forKey:@"userID"];
+            [[PFInstallation currentInstallation] saveInBackground];
+            
+            [self goToMainTabs];
         }
     }];
+}
+
+- (void)goToMainTabs {
+    
+    
+    
+    [self.navigationController popViewControllerAnimated:YES]; // go back to tabs
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
