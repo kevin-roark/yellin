@@ -16,11 +16,20 @@
 @property (nonatomic, strong) UIButton *playButton;
 @property (nonatomic, strong) UIButton *sendButton;
 
+@property (nonatomic, strong) UILabel *instructionLabel;
+
 @property (nonatomic, strong) UILabel *recordingTimeLabel;
 
 @property (nonatomic, strong) UILabel *uploadingLabel;
 
 @property (nonatomic) BOOL performedInitialAnimation;
+
+- (void)playButtonTouchup;
+- (void)playButtonTouchdown;
+- (void)recordButtonTouchup;
+- (void)recordButtonTouchdown;
+- (void)sendButtonTouchup;
+- (void)sendButtonTouchdown;
 
 - (void) addPostSoundButtons;
 - (void) removePostSoundButtons;

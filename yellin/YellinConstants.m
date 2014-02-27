@@ -8,8 +8,8 @@
 
 #import "YellinConstants.h"
 
-float MAX_RECORDING_TIME = 3.0;
-float MIN_RECORDING_TIME = 0.2;
+float MAX_RECORDING_TIME = 4.0;
+float MIN_RECORDING_TIME = 0.1;
 
 int MAX_MOUTH_PLAYS = 5;
 

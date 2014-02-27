@@ -64,6 +64,8 @@
 }
 
 - (void)recordButtonPressed {
+    [self.makeYellView recordButtonTouchdown];
+    
     NSLog(@"record button pressed oh yeah");
     
     // Setup audio session for recording
@@ -79,8 +81,6 @@
     }
         
     if (!self.recorder.recording) { // again this should always be the case
-        NSError *err;
-        AVAudioSession *session = [AVAudioSession sharedInstance];
         [session setActive:YES error:&err];
         if (err) {
             NSLog(@"Error: %@", [err localizedDescription]);
@@ -99,13 +99,23 @@
 }
 
 - (void)recordButtonReleased {
+    [self.makeYellView recordButtonTouchup];
+    
     NSLog(@"record button released");
     
-    CGFloat recordingLength = self.recorder.currentTime;
-    [self.recorder stop];
+    CGFloat recordingLength;
+    if (self.recorder.recording) {
+        recordingLength = self.recorder.currentTime;
+        [self.recorder stop];
+    } else {
+        recordingLength = MAX_RECORDING_TIME;
+    }
     
-    if (!self.makeYellView.performedInitialAnimation && recordingLength > MIN_RECORDING_TIME) {
+    if (!self.makeYellView.performedInitialAnimation && recordingLength >= MIN_RECORDING_TIME) {
         [self.makeYellView animateRecordButtonUpWithDuration:1.0];
+    }
+    else if (self.makeYellView.performedInitialAnimation && recordingLength < MIN_RECORDING_TIME) {
+        [self.makeYellView revertToOriginalState];
     }
     
     // Setup audio session for playing
@@ -129,6 +139,7 @@
             [timer invalidate];
             timer = nil;
             self.makeYellView.backgroundColor = [UIColor whiteColor];
+            [self.recorder stop];
             [self recordButtonReleased];
         }
     }

@@ -17,16 +17,26 @@
         
         self.performedInitialAnimation = NO;
         
-        self.recordButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        self.recordButton = [UIButton buttonWithType:UIButtonTypeCustom];
         self.recordButton.frame = CGRectMake(self.frame.size.width/2 - 75, self.frame.size.height - 220, 150, 150);
         self.recordButton.backgroundColor = [UIColor redColor];
         self.recordButton.layer.cornerRadius = 75;
         self.recordButton.enabled = YES;
         [self addSubview:self.recordButton];
         
+        self.instructionLabel = [[UILabel alloc]
+                                 initWithFrame:CGRectMake(10, self.frame.size.height - 72, self.frame.size.width - 20, 20)];
+        self.instructionLabel.textAlignment = NSTextAlignmentCenter;
+        self.instructionLabel.textColor = [UIColor darkGrayColor];
+        self.instructionLabel.font = [UIFont fontWithName:@"Helvetica" size:16];
+        self.instructionLabel.text = @"hold the button to record";
+        [self addSubview:self.instructionLabel];
+        
+        /* now calling this in controller for speed?
         [self.recordButton addTarget:self action:@selector(recordButtonTouchdown) forControlEvents:UIControlEventTouchDown];
         [self.recordButton addTarget:self action:@selector(recordButtonTouchup) forControlEvents:UIControlEventTouchUpOutside];
         [self.recordButton addTarget:self action:@selector(recordButtonTouchup) forControlEvents:UIControlEventTouchUpInside];
+        */
         
         self.playButton = [UIButton buttonWithType:UIButtonTypeCustom];
         self.playButton.frame = CGRectMake(20, self.frame.size.height - 25, self.frame.size.width - 40, 50);
@@ -79,11 +89,13 @@
 }
 
 - (void)recordButtonTouchup {
+    self.instructionLabel.text = @"hold the button to record";
     self.backgroundColor = [UIColor whiteColor];
     self.recordingTimeLabel.textColor = [UIColor blackColor];
 }
 
 - (void)recordButtonTouchdown {
+    self.instructionLabel.text = @"";
     self.backgroundColor = [YellinUtility lighterRecordColor];
     self.recordingTimeLabel.textColor = [UIColor whiteColor];
 }
@@ -135,6 +147,7 @@
 
 - (void)animateRecordButtonUpWithDuration:(CGFloat)duration {
     self.performedInitialAnimation = YES;
+    self.instructionLabel.text = @"";
     [UIView animateWithDuration:duration animations:^{
         // animation block
         self.recordButton.frame = CGRectOffset(self.recordButton.frame, 0, -150);
@@ -149,6 +162,7 @@
     self.performedInitialAnimation = NO;
     self.recordingTimeLabel.text = @"";
     self.uploadingLabel.text = @"ALL DONE!!";
+    self.instructionLabel.alpha = 0.0;
     
     [self performRevertAnimation];  
 }
@@ -160,16 +174,19 @@
         self.playButton.frame = CGRectOffset(self.playButton.frame, 0, 150);
         self.sendButton.frame = CGRectOffset(self.sendButton.frame, 0, 150);
         self.uploadingLabel.alpha = 0.0;
+        self.instructionLabel.alpha = 0.4;
     } completion:^(BOOL finished) {
         // completion block
         self.uploadingLabel.text = @"creating ur yell ...";
         self.uploadingLabel.alpha = 1.0;
         [self.uploadingLabel removeFromSuperview];
+        self.instructionLabel.alpha = 1.0;
     }];
 }
 
 - (void) updateRecordingLengthStatus:(NSTimeInterval)currentLength {
-    self.recordingTimeLabel.text = [NSString stringWithFormat:@"%.01f // %.01f", currentLength, MAX_RECORDING_TIME];
+    NSTimeInterval lengthToShow = MIN(currentLength, MAX_RECORDING_TIME);
+    self.recordingTimeLabel.text = [NSString stringWithFormat:@"%.01f // %.01f", lengthToShow, MAX_RECORDING_TIME];
 }
 
 /*
