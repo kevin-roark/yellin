@@ -50,6 +50,10 @@
     [self.navigationItem.titleView sizeToFit];
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [UINavigationBar appearance].barTintColor = [YellinUtility coolYellinColor];

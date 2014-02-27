@@ -93,6 +93,10 @@
     [self.view addSubview:scrollView];
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
 + (UIColor *)whatColorWithAlpha:(CGFloat)alphaValue {
     return [UIColor colorWithRed:0.7 green:0.3 blue:0.7 alpha:alphaValue];
 }
