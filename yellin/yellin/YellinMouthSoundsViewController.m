@@ -46,7 +46,7 @@
     self.nothingHereLabel.numberOfLines = 0;
     self.nothingHereLabel.font = [UIFont fontWithName:@"Helvetica" size:24];
 
-    self.navigationItem.titleView = [YellinUtility getTitleLabel:@"hear ur sounds"];
+    self.navigationItem.titleView = [YellinUtility getTitleLabel:@"hear our sounds"];
     [self.navigationItem.titleView sizeToFit];
 }
 

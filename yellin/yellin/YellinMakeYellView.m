@@ -192,6 +192,9 @@
 }
 
 - (void) updateRecordingLengthStatus:(NSTimeInterval)currentLength {
+    if (currentLength < 0.05)
+        return;
+    
     NSTimeInterval lengthToShow = MIN(currentLength, MAX_RECORDING_TIME);
     self.recordingTimeLabel.text = [NSString stringWithFormat:@"%.01f // %.01f", lengthToShow, MAX_RECORDING_TIME];
 }
