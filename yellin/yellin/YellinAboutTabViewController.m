@@ -37,7 +37,7 @@
         configuredDescriptionLabelWithFrame:CGRectMake(5, 0, mainDescriptionFrame.frame.size.width - 10, mainDescriptionFrame.frame.size.height)];
     NSMutableString *mainText = [NSMutableString stringWithString:@"\u2022 Send \"us\" any sound.\n"];
     [mainText appendString:@"\u2022 \"We\" recreate that sound with \"our\" mouths and send it back to you in realtime for max listening pleasure.\n"];
-    [mainText appendString:[NSString stringWithFormat:@"\u2022 Listen to \"our\" special mouth sound %d whole times (you'll lov it!!).\n", MAX_MOUTH_PLAYS]];
+    [mainText appendString:[NSString stringWithFormat:@"\u2022 Listen to \"our\" special mouth sound %d whole times (you'll love it!!).\n", MAX_MOUTH_PLAYS]];
     [mainText appendString:@"\u2022 Do it a lot cuz we're crazy cool funny lol."];
     mainDescription.text = mainText;
 
@@ -56,8 +56,8 @@
     UILabel *whoDescription = [YellinAboutTabViewController
         configuredDescriptionLabelWithFrame:CGRectMake(5, 0, whoDescriptionFrame.frame.size.width - 10, whoDescriptionFrame.frame.size.height)];
     NSMutableString *whoText = [[NSMutableString alloc] init];
-    [whoText appendString:@"Who is makin' all these crazy cool mouth sounds? For now it's just Kevin, Dylan, and Henry, three chillers who made this "];
-    [whoText appendString:@"thing. We r sorry for delayed responses in cases where we are all sleeping or something (LoL!)! In case we ever need more "];
+    [whoText appendString:@"Who is makin' all these crazy cool mouth sounds? MILLER'S FANTASY - Kevin, Dylan, and Henry - the people who made this thing. "];
+    [whoText appendString:@"We are sorry for delayed responses in cases where we are all sleeping or something (LoL!)! In case we ever need more "];
     [whoText appendString:@"mouths and u wanna be one, or in case u just wanna chat or need a friend, you can reach us at Kev's twitter: @LIMP__BISCUIT."];
     whoDescription.text = whoText;
     
@@ -75,7 +75,7 @@
     
     UILabel *thanksDescription = [YellinAboutTabViewController
         configuredDescriptionLabelWithFrame:CGRectMake(5, 0, thanksDescriptionFrame.frame.size.width - 10, thanksDescriptionFrame.frame.size.height)];
-    NSMutableString *thanksText = [NSMutableString stringWithString:@"Thanks for playing with this and humoring us!! Seriously!!!"];
+    NSMutableString *thanksText = [NSMutableString stringWithString:@"Thanks for playing with this and listening to sounds!! Seriously!!!"];
     thanksDescription.text = thanksText;
     
     [thanksDescriptionFrame addSubview:thanksDescription];

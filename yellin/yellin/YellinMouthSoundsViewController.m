@@ -143,9 +143,9 @@
 - (IBAction)orignalSoundButtonPressed:(id)sender {
     if (self.audioPlayer.playing) { // another sound playin
         [self.audioPlayer pause];
+        [self.activeCell.originalTimeline cancelAnimation];
+        [self.activeCell.mouthTimeline cancelAnimation];
     }
-    [self.activeCell.originalTimeline cancelAnimation];
-    [self.activeCell.mouthTimeline cancelAnimation];
     
     UIButton *buttonPessed = sender;
     YellinSoundRespondedCell *soundResponseCell = (YellinSoundRespondedCell *)buttonPessed.superview.superview;
@@ -163,9 +163,9 @@
 - (IBAction)mouthSoundButtonPressed:(id)sender {
     if (self.audioPlayer.playing) { // another sound playin
         [self.audioPlayer pause];
+        [self.activeCell.originalTimeline cancelAnimation];
+        [self.activeCell.mouthTimeline cancelAnimation];
     }
-    [self.activeCell.originalTimeline cancelAnimation];
-    [self.activeCell.mouthTimeline cancelAnimation];
     
     UIButton *buttonPessed = sender;
     YellinSoundRespondedCell *soundResponseCell = (YellinSoundRespondedCell *)buttonPessed.superview.superview;

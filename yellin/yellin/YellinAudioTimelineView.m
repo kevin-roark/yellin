@@ -31,7 +31,9 @@
     [UIView animateWithDuration:totalSeconds animations:^{
         self.currentTimeMarker.frame = CGRectOffset(self.currentTimeMarker.frame, self.frame.size.width - self.currentTimeMarker.frame.size.width, 0);
     } completion:^(BOOL finished) {
-        self.currentTimeMarker.frame = CGRectOffset(self.currentTimeMarker.frame, - (self.currentTimeMarker.frame.origin.x), 0);
+        if (finished) {
+            self.currentTimeMarker.frame = CGRectMake(0, 0, 8, 8);
+        }
     }];
 }
 

@@ -21,6 +21,7 @@
         self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, 77);
         
         self.playOriginalButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        self.playOriginalButton.layer.cornerRadius = 3.0f;
         self.playOriginalButton.frame = CGRectMake(18.0, 6.0, 117.0, 40);
         self.playOriginalButton.tintColor = [UIColor whiteColor];
         self.playOriginalButton.backgroundColor = [YellinSoundRespondedCell originalButtonColor];
@@ -28,6 +29,7 @@
         [self addSubview:self.playOriginalButton];
         
         self.playMouthButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        self.playMouthButton.layer.cornerRadius = 3.0f;
         self.playMouthButton.frame = CGRectMake(self.playOriginalButton.frame.origin.x + self.playOriginalButton.frame.size.width + 6, 6.0, 117.0, 40);
         self.playMouthButton.tintColor = [UIColor whiteColor];
         self.playMouthButton.backgroundColor = [YellinSoundRespondedCell mouthButtonColor]; 

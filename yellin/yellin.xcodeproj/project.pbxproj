@@ -50,6 +50,12 @@
 		FB201AF518908F3F00059C5D /* YellinRespondToChirpView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AF418908F3F00059C5D /* YellinRespondToChirpView.m */; };
 		FB201AFA1890A64500059C5D /* YellinAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AF91890A64500059C5D /* YellinAudioRecorder.m */; };
 		FB201AFD1890C01E00059C5D /* YellinAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AFC1890C01E00059C5D /* YellinAudioPlayer.m */; };
+		FBACE32A18D677D400BDD354 /* ear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBACE32518D677D400BDD354 /* ear@2x.png */; };
+		FBACE32B18D677D400BDD354 /* mic.png in Resources */ = {isa = PBXBuildFile; fileRef = FBACE32618D677D400BDD354 /* mic.png */; };
+		FBACE32C18D677D400BDD354 /* mic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBACE32718D677D400BDD354 /* mic@2x.png */; };
+		FBACE32D18D677D400BDD354 /* question.png in Resources */ = {isa = PBXBuildFile; fileRef = FBACE32818D677D400BDD354 /* question.png */; };
+		FBACE32E18D677D400BDD354 /* question@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBACE32918D677D400BDD354 /* question@2x.png */; };
+		FBACE33118D677F100BDD354 /* ear.png in Resources */ = {isa = PBXBuildFile; fileRef = FBACE33018D677F100BDD354 /* ear.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +135,12 @@
 		FB201AF91890A64500059C5D /* YellinAudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinAudioRecorder.m; sourceTree = "<group>"; };
 		FB201AFB1890C01E00059C5D /* YellinAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinAudioPlayer.h; sourceTree = "<group>"; };
 		FB201AFC1890C01E00059C5D /* YellinAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinAudioPlayer.m; sourceTree = "<group>"; };
+		FBACE32518D677D400BDD354 /* ear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ear@2x.png"; path = "images/ear@2x.png"; sourceTree = "<group>"; };
+		FBACE32618D677D400BDD354 /* mic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mic.png; path = images/mic.png; sourceTree = "<group>"; };
+		FBACE32718D677D400BDD354 /* mic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mic@2x.png"; path = "images/mic@2x.png"; sourceTree = "<group>"; };
+		FBACE32818D677D400BDD354 /* question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = question.png; path = images/question.png; sourceTree = "<group>"; };
+		FBACE32918D677D400BDD354 /* question@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "question@2x.png"; path = "images/question@2x.png"; sourceTree = "<group>"; };
+		FBACE33018D677F100BDD354 /* ear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ear.png; path = images/ear.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +222,7 @@
 		FB201A67188E301200059C5D /* yellin */ = {
 			isa = PBXGroup;
 			children = (
+				FBACE32F18D677E100BDD354 /* images */,
 				FB201ABC188F4B7A00059C5D /* YellinConstants.h */,
 				FB201ABD188F4B7A00059C5D /* YellinConstants.m */,
 				FB201AE018904D7F00059C5D /* YellinUtility.h */,
@@ -326,6 +339,19 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		FBACE32F18D677E100BDD354 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				FBACE33018D677F100BDD354 /* ear.png */,
+				FBACE32518D677D400BDD354 /* ear@2x.png */,
+				FBACE32618D677D400BDD354 /* mic.png */,
+				FBACE32718D677D400BDD354 /* mic@2x.png */,
+				FBACE32818D677D400BDD354 /* question.png */,
+				FBACE32918D677D400BDD354 /* question@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -403,9 +429,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBACE33118D677F100BDD354 /* ear.png in Resources */,
 				FB201A7D188E301200059C5D /* Images.xcassets in Resources */,
+				FBACE32B18D677D400BDD354 /* mic.png in Resources */,
+				FBACE32D18D677D400BDD354 /* question.png in Resources */,
 				FB201A6C188E301200059C5D /* InfoPlist.strings in Resources */,
+				FBACE32E18D677D400BDD354 /* question@2x.png in Resources */,
 				FB201A75188E301200059C5D /* Main.storyboard in Resources */,
+				FBACE32C18D677D400BDD354 /* mic@2x.png in Resources */,
+				FBACE32A18D677D400BDD354 /* ear@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

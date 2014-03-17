@@ -25,21 +25,21 @@
     // recording tab
     YellinMakeYellViewController *makeYellVC = [[YellinMakeYellViewController alloc] init];
     YellinNavigationViewController *makeYellNVC = [[YellinNavigationViewController alloc] initWithRootViewController:makeYellVC];
-    makeYellNVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"yell" image:[UIImage imageNamed:@"first"] selectedImage:[UIImage imageNamed:@"first"]];
+    makeYellNVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"yell" image:[UIImage imageNamed:@"mic"] selectedImage:[UIImage imageNamed:@"mic"]];
     makeYellNVC.navigationBarHidden = NO;
     [tabs addObject:makeYellNVC];
     
     // mouth sound responses view
     YellinMouthSoundsViewController *mouthSoundsVC = [[YellinMouthSoundsViewController alloc] initWithStyle:UITableViewStyleGrouped];
     YellinNavigationViewController *mouthSoundsNVC = [[YellinNavigationViewController alloc] initWithRootViewController:mouthSoundsVC];
-    mouthSoundsNVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"replies" image:[UIImage imageNamed:@"second"] selectedImage:[UIImage imageNamed:@"second"]];
+    mouthSoundsNVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"replies" image:[UIImage imageNamed:@"ear"] selectedImage:[UIImage imageNamed:@"ear"]];
     mouthSoundsNVC.navigationBarHidden = NO;
     [tabs addObject:mouthSoundsNVC];
     
     // make about tab view
     YellinAboutTabViewController *aboutVC = [[YellinAboutTabViewController alloc] init];
     YellinNavigationViewController *aboutNVC = [[YellinNavigationViewController alloc] initWithRootViewController:aboutVC];
-    aboutNVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"about" image:nil selectedImage:nil];
+    aboutNVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"about" image:[UIImage imageNamed:@"question"] selectedImage:[UIImage imageNamed:@"question"]];
     aboutNVC.navigationBarHidden = NO;
     [tabs addObject:aboutNVC];
     

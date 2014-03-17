@@ -89,7 +89,9 @@
 }
 
 - (void)recordButtonTouchup {
-    self.instructionLabel.text = @"hold the button to record";
+    if (!self.performedInitialAnimation) {
+        self.instructionLabel.text = @"hold the button to record";
+    }
     self.backgroundColor = [UIColor whiteColor];
     self.recordingTimeLabel.textColor = [UIColor blackColor];
 }
@@ -123,10 +125,14 @@
 - (void)setToUploading:(BOOL)wantUploading {
     if (wantUploading) {
         [self addSubview:self.uploadingLabel];
+        self.sendButton.enabled = NO;
+        self.playButton.enabled = NO;
         self.uploadingTimer = [NSTimer scheduledTimerWithTimeInterval:0.28
             target:self selector:@selector(updateUploadingView) userInfo:nil repeats:YES];
     } else {
         //[self.uploadingLabel removeFromSuperview];
+        self.sendButton.enabled = YES;
+        self.sendButton.enabled = YES;
         [self.uploadingTimer invalidate];
         self.uploadingTimer = nil;
     }
@@ -181,6 +187,7 @@
         self.uploadingLabel.alpha = 1.0;
         [self.uploadingLabel removeFromSuperview];
         self.instructionLabel.alpha = 1.0;
+        self.instructionLabel.text = @"hold the button to record";
     }];
 }
 
