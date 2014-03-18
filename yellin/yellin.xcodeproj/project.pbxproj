@@ -50,6 +50,8 @@
 		FB201AF518908F3F00059C5D /* YellinRespondToChirpView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AF418908F3F00059C5D /* YellinRespondToChirpView.m */; };
 		FB201AFA1890A64500059C5D /* YellinAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AF91890A64500059C5D /* YellinAudioRecorder.m */; };
 		FB201AFD1890C01E00059C5D /* YellinAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AFC1890C01E00059C5D /* YellinAudioPlayer.m */; };
+		FB4C7BF318D7EF990080BD27 /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4C7BF118D7EF990080BD27 /* x.png */; };
+		FB4C7BF418D7EF990080BD27 /* x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4C7BF218D7EF990080BD27 /* x@2x.png */; };
 		FBACE32A18D677D400BDD354 /* ear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBACE32518D677D400BDD354 /* ear@2x.png */; };
 		FBACE32B18D677D400BDD354 /* mic.png in Resources */ = {isa = PBXBuildFile; fileRef = FBACE32618D677D400BDD354 /* mic.png */; };
 		FBACE32C18D677D400BDD354 /* mic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBACE32718D677D400BDD354 /* mic@2x.png */; };
@@ -135,6 +137,8 @@
 		FB201AF91890A64500059C5D /* YellinAudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinAudioRecorder.m; sourceTree = "<group>"; };
 		FB201AFB1890C01E00059C5D /* YellinAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinAudioPlayer.h; sourceTree = "<group>"; };
 		FB201AFC1890C01E00059C5D /* YellinAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinAudioPlayer.m; sourceTree = "<group>"; };
+		FB4C7BF118D7EF990080BD27 /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = x.png; path = images/x.png; sourceTree = "<group>"; };
+		FB4C7BF218D7EF990080BD27 /* x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "x@2x.png"; path = "images/x@2x.png"; sourceTree = "<group>"; };
 		FBACE32518D677D400BDD354 /* ear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ear@2x.png"; path = "images/ear@2x.png"; sourceTree = "<group>"; };
 		FBACE32618D677D400BDD354 /* mic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mic.png; path = images/mic.png; sourceTree = "<group>"; };
 		FBACE32718D677D400BDD354 /* mic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mic@2x.png"; path = "images/mic@2x.png"; sourceTree = "<group>"; };
@@ -342,6 +346,8 @@
 		FBACE32F18D677E100BDD354 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FB4C7BF118D7EF990080BD27 /* x.png */,
+				FB4C7BF218D7EF990080BD27 /* x@2x.png */,
 				FBACE33018D677F100BDD354 /* ear.png */,
 				FBACE32518D677D400BDD354 /* ear@2x.png */,
 				FBACE32618D677D400BDD354 /* mic.png */,
@@ -431,6 +437,8 @@
 			files = (
 				FBACE33118D677F100BDD354 /* ear.png in Resources */,
 				FB201A7D188E301200059C5D /* Images.xcassets in Resources */,
+				FB4C7BF418D7EF990080BD27 /* x@2x.png in Resources */,
+				FB4C7BF318D7EF990080BD27 /* x.png in Resources */,
 				FBACE32B18D677D400BDD354 /* mic.png in Resources */,
 				FBACE32D18D677D400BDD354 /* question.png in Resources */,
 				FB201A6C188E301200059C5D /* InfoPlist.strings in Resources */,

@@ -48,7 +48,7 @@
         && [[YellinUtility theChosenFew] containsObject:[PFUser currentUser].objectId]) { // and is one of us
         YellinMakeMouthSoundViewController *makeMouthVC = [[YellinMakeMouthSoundViewController alloc] initWithStyle:UITableViewStyleGrouped];
         YellinNavigationViewController *makeMouthNVC = [[YellinNavigationViewController alloc] initWithRootViewController:makeMouthVC];
-        makeMouthNVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"mouth sounds" image:nil selectedImage:nil];
+        makeMouthNVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"mouth sounds" image:[UIImage imageNamed:@"x"] selectedImage:[UIImage imageNamed:@"x"]];
         [tabs addObject:makeMouthNVC];
     }
     

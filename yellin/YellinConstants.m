@@ -19,7 +19,7 @@ NSString *const PARSE_CLIENT_KEY = @"AzHkvrwtwADFpBXg519aHx3BJM1mWpzYWOqQxQin";
 NSString *const CHIRP_PARSE_KEY = @"Chirp";
 
 NSString *const KEVIN_USER_ID = @"jraEIgCzyq";
-NSString *const DYLAN_USER_ID = @"xxxxx";
+NSString *const DYLAN_USER_ID = @"fg1z22iln1";
 NSString *const HENRY_USER_ID = @"ooooo";
 
 NSString *const MOUTH_SOUNDS_TAB = @"mouth_sounds";

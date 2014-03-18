@@ -16,7 +16,7 @@
         self.userInteractionEnabled = YES;
         self.chirp = chirp;
         
-        self.textLabel.text = @"xxx";
+        self.textLabel.text = @"a fresh yell";
         self.backgroundColor = [UIColor blackColor];
         self.textLabel.textColor = [UIColor whiteColor];
         self.textLabel.font = [UIFont fontWithName:self.textLabel.font.fontName size:13.0];

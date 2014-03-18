@@ -44,6 +44,12 @@
 
 - (PFQuery *)queryForTable {
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
+    
+    // set up cache if necessary, makes things happen on no network
+    if (self.objects.count == 0) {
+        query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    }
+
     [query whereKey:@"has_mouth_sound" equalTo:[NSNumber numberWithBool:NO]];
     
     return query;
@@ -57,7 +63,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self loadObjects];
 }
 
 //- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -65,7 +70,7 @@
 //}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
-    NSString *reuseIdentifierText = [NSString stringWithFormat:@"needs_mouth_%@", indexPath];
+    NSString *reuseIdentifierText = [NSString stringWithFormat:@"needs_mouth_%@", object];
     YellinSoundNeedsMouthCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifierText];
     
     if (!cell) {
