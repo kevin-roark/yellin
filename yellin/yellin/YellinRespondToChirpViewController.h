@@ -15,6 +15,8 @@
 
 @interface YellinRespondToChirpViewController : UIViewController<AVAudioPlayerDelegate, AVAudioRecorderDelegate, UIAlertViewDelegate>
 
+@property (nonatomic, strong) YellinRespondToChirpView *respondView;
+
 @property (nonatomic, strong) PFObject *chirp;
 
 @property (nonatomic, strong) YellinAudioRecorder *recorder;

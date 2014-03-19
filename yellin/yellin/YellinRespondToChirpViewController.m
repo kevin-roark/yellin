@@ -18,6 +18,7 @@
     [super viewDidLoad];
 	
     YellinRespondToChirpView *chirpResponseView = [[YellinRespondToChirpView alloc] initWithFrame:self.view.frame];
+    self.respondView = chirpResponseView;
     
     // set up play buttons
     [chirpResponseView.sendButton addTarget:self action:@selector(sendButtonPressed) forControlEvents:UIControlEventTouchUpInside];
@@ -45,6 +46,9 @@
 
 - (void)sendButtonPressed {
     NSLog(@"send button pressed");
+    self.respondView.sendButton.enabled = NO;
+    self.respondView.backgroundColor = [UIColor blueColor];
+    
     NSData *audioData = [NSData dataWithContentsOfURL:self.recorder.url];
     PFFile *audioFile = [PFFile fileWithData:audioData];
     [audioFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -75,6 +79,8 @@
                     [responsePush sendPushInBackground];
                     
                     NSLog(@"sent push to user");
+                    
+                    self.respondView.sendButton.enabled = YES;
                     
                     // display alert to us
                     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Got ur mouth sound"
