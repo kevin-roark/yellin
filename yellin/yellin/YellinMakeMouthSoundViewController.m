@@ -52,6 +52,8 @@
 
     [query whereKey:@"has_mouth_sound" equalTo:[NSNumber numberWithBool:NO]];
     
+    [query addAscendingOrder:@"createdAt"];
+    
     return query;
 }
 
