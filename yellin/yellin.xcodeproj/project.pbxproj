@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5D3013918E110730050AED3 /* App_Store.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D3013118E110730050AED3 /* App_Store.png */; };
+		B5D3013A18E110730050AED3 /* App_Store@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D3013218E110730050AED3 /* App_Store@2x.png */; };
+		B5D3013B18E110730050AED3 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D3013318E110730050AED3 /* Icon.png */; };
+		B5D3013C18E110730050AED3 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D3013418E110730050AED3 /* Icon@2x.png */; };
+		B5D3013D18E110730050AED3 /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D3013518E110730050AED3 /* Settings.png */; };
+		B5D3013E18E110730050AED3 /* Settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D3013618E110730050AED3 /* Settings@2x.png */; };
+		B5D3013F18E110730050AED3 /* Spotlight.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D3013718E110730050AED3 /* Spotlight.png */; };
+		B5D3014018E110730050AED3 /* Spotlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D3013818E110730050AED3 /* Spotlight@2x.png */; };
 		FB1F7F6318931B59007B00DA /* YellinAudioTimelineView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1F7F6218931B59007B00DA /* YellinAudioTimelineView.m */; };
 		FB1F7F691895AAB8007B00DA /* YellinAboutTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1F7F681895AAB8007B00DA /* YellinAboutTabViewController.m */; };
 		FB201A62188E301200059C5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201A61188E301200059C5D /* Foundation.framework */; };
@@ -71,6 +79,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B5D3013118E110730050AED3 /* App_Store.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = App_Store.png; sourceTree = "<group>"; };
+		B5D3013218E110730050AED3 /* App_Store@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App_Store@2x.png"; sourceTree = "<group>"; };
+		B5D3013318E110730050AED3 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		B5D3013418E110730050AED3 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		B5D3013518E110730050AED3 /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
+		B5D3013618E110730050AED3 /* Settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings@2x.png"; sourceTree = "<group>"; };
+		B5D3013718E110730050AED3 /* Spotlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spotlight.png; sourceTree = "<group>"; };
+		B5D3013818E110730050AED3 /* Spotlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spotlight@2x.png"; sourceTree = "<group>"; };
 		FB1F7F6118931B59007B00DA /* YellinAudioTimelineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinAudioTimelineView.h; sourceTree = "<group>"; };
 		FB1F7F6218931B59007B00DA /* YellinAudioTimelineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinAudioTimelineView.m; sourceTree = "<group>"; };
 		FB1F7F671895AAB8007B00DA /* YellinAboutTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinAboutTabViewController.h; sourceTree = "<group>"; };
@@ -346,6 +362,14 @@
 		FBACE32F18D677E100BDD354 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				B5D3013118E110730050AED3 /* App_Store.png */,
+				B5D3013218E110730050AED3 /* App_Store@2x.png */,
+				B5D3013318E110730050AED3 /* Icon.png */,
+				B5D3013418E110730050AED3 /* Icon@2x.png */,
+				B5D3013518E110730050AED3 /* Settings.png */,
+				B5D3013618E110730050AED3 /* Settings@2x.png */,
+				B5D3013718E110730050AED3 /* Spotlight.png */,
+				B5D3013818E110730050AED3 /* Spotlight@2x.png */,
 				FB4C7BF118D7EF990080BD27 /* x.png */,
 				FB4C7BF218D7EF990080BD27 /* x@2x.png */,
 				FBACE33018D677F100BDD354 /* ear.png */,
@@ -435,17 +459,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5D3013D18E110730050AED3 /* Settings.png in Resources */,
+				B5D3013A18E110730050AED3 /* App_Store@2x.png in Resources */,
 				FBACE33118D677F100BDD354 /* ear.png in Resources */,
 				FB201A7D188E301200059C5D /* Images.xcassets in Resources */,
 				FB4C7BF418D7EF990080BD27 /* x@2x.png in Resources */,
+				B5D3013C18E110730050AED3 /* Icon@2x.png in Resources */,
+				B5D3013F18E110730050AED3 /* Spotlight.png in Resources */,
 				FB4C7BF318D7EF990080BD27 /* x.png in Resources */,
+				B5D3013E18E110730050AED3 /* Settings@2x.png in Resources */,
 				FBACE32B18D677D400BDD354 /* mic.png in Resources */,
 				FBACE32D18D677D400BDD354 /* question.png in Resources */,
 				FB201A6C188E301200059C5D /* InfoPlist.strings in Resources */,
 				FBACE32E18D677D400BDD354 /* question@2x.png in Resources */,
 				FB201A75188E301200059C5D /* Main.storyboard in Resources */,
+				B5D3013918E110730050AED3 /* App_Store.png in Resources */,
 				FBACE32C18D677D400BDD354 /* mic@2x.png in Resources */,
+				B5D3013B18E110730050AED3 /* Icon.png in Resources */,
 				FBACE32A18D677D400BDD354 /* ear@2x.png in Resources */,
+				B5D3014018E110730050AED3 /* Spotlight@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,7 +641,6 @@
 		FB201A94188E301200059C5D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Kevin Roark (3V9EAH7ZH2)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kevin Roark (3V9EAH7ZH2)";
@@ -630,7 +661,6 @@
 		FB201A95188E301200059C5D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Kevin Roark (3V9EAH7ZH2)";
 				FRAMEWORK_SEARCH_PATHS = (
