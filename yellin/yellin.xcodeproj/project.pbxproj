@@ -1,0 +1,767 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B5A389FB18E11CFF00819B62 /* App_Store.png in Resources */ = {isa = PBXBuildFile; fileRef = B5A389F318E11CFF00819B62 /* App_Store.png */; };
+		B5A389FC18E11CFF00819B62 /* App_Store@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5A389F418E11CFF00819B62 /* App_Store@2x.png */; };
+		B5A389FD18E11CFF00819B62 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B5A389F518E11CFF00819B62 /* Icon.png */; };
+		B5A389FE18E11CFF00819B62 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5A389F618E11CFF00819B62 /* Icon@2x.png */; };
+		B5A389FF18E11CFF00819B62 /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = B5A389F718E11CFF00819B62 /* Settings.png */; };
+		B5A38A0018E11CFF00819B62 /* Settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5A389F818E11CFF00819B62 /* Settings@2x.png */; };
+		B5A38A0118E11CFF00819B62 /* Spotlight.png in Resources */ = {isa = PBXBuildFile; fileRef = B5A389F918E11CFF00819B62 /* Spotlight.png */; };
+		B5A38A0218E11CFF00819B62 /* Spotlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5A389FA18E11CFF00819B62 /* Spotlight@2x.png */; };
+		B5A38A0518E11D2F00819B62 /* launch_image_short.png in Resources */ = {isa = PBXBuildFile; fileRef = B5A38A0318E11D2F00819B62 /* launch_image_short.png */; };
+		B5A38A0618E11D2F00819B62 /* launch_image_tall.png in Resources */ = {isa = PBXBuildFile; fileRef = B5A38A0418E11D2F00819B62 /* launch_image_tall.png */; };
+		FB1F7F6318931B59007B00DA /* YellinAudioTimelineView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1F7F6218931B59007B00DA /* YellinAudioTimelineView.m */; };
+		FB1F7F691895AAB8007B00DA /* YellinAboutTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1F7F681895AAB8007B00DA /* YellinAboutTabViewController.m */; };
+		FB201A62188E301200059C5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201A61188E301200059C5D /* Foundation.framework */; };
+		FB201A64188E301200059C5D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201A63188E301200059C5D /* CoreGraphics.framework */; };
+		FB201A66188E301200059C5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201A65188E301200059C5D /* UIKit.framework */; };
+		FB201A6C188E301200059C5D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB201A6A188E301200059C5D /* InfoPlist.strings */; };
+		FB201A6E188E301200059C5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201A6D188E301200059C5D /* main.m */; };
+		FB201A72188E301200059C5D /* YellinAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201A71188E301200059C5D /* YellinAppDelegate.m */; };
+		FB201A75188E301200059C5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB201A73188E301200059C5D /* Main.storyboard */; };
+		FB201A7D188E301200059C5D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB201A7C188E301200059C5D /* Images.xcassets */; };
+		FB201A84188E301200059C5D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201A83188E301200059C5D /* XCTest.framework */; };
+		FB201A85188E301200059C5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201A61188E301200059C5D /* Foundation.framework */; };
+		FB201A86188E301200059C5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201A65188E301200059C5D /* UIKit.framework */; };
+		FB201A8E188E301200059C5D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB201A8C188E301200059C5D /* InfoPlist.strings */; };
+		FB201A90188E301200059C5D /* yellinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201A8F188E301200059C5D /* yellinTests.m */; };
+		FB201A9E188E37E400059C5D /* YellinMakeYellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201A9D188E37E400059C5D /* YellinMakeYellViewController.m */; };
+		FB201AA1188E37FE00059C5D /* YellinMouthSoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AA0188E37FE00059C5D /* YellinMouthSoundsViewController.m */; };
+		FB201AA6188E412F00059C5D /* YellinMakeYellView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AA5188E412F00059C5D /* YellinMakeYellView.m */; };
+		FB201AA9188E414300059C5D /* YellinMouthYellView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AA8188E414300059C5D /* YellinMouthYellView.m */; };
+		FB201ABE188F4B7A00059C5D /* YellinConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201ABD188F4B7A00059C5D /* YellinConstants.m */; };
+		FB201AC2188F7E8400059C5D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201AC1188F7E8400059C5D /* FacebookSDK.framework */; };
+		FB201AC4188F7F9C00059C5D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201AC3188F7F9C00059C5D /* Parse.framework */; };
+		FB201AC6188F81CD00059C5D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201AC5188F81CD00059C5D /* AudioToolbox.framework */; };
+		FB201AC8188F81D400059C5D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201AC7188F81D400059C5D /* CFNetwork.framework */; };
+		FB201ACA188F81E100059C5D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201AC9188F81E100059C5D /* CoreLocation.framework */; };
+		FB201ACC188F81E900059C5D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201ACB188F81E900059C5D /* libz.dylib */; };
+		FB201ACE188F81F100059C5D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201ACD188F81F100059C5D /* MobileCoreServices.framework */; };
+		FB201AD0188F81F900059C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201ACF188F81F900059C5D /* QuartzCore.framework */; };
+		FB201AD2188F81FF00059C5D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201AD1188F81FF00059C5D /* Security.framework */; };
+		FB201AD4188F820500059C5D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201AD3188F820500059C5D /* StoreKit.framework */; };
+		FB201AD6188F820E00059C5D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201AD5188F820E00059C5D /* SystemConfiguration.framework */; };
+		FB201AD9188F857300059C5D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AD8188F857300059C5D /* LoginViewController.m */; };
+		FB201ADC1890490D00059C5D /* YellinMasterTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201ADB1890490D00059C5D /* YellinMasterTabBarController.m */; };
+		FB201ADF18904A0D00059C5D /* YellinNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201ADE18904A0D00059C5D /* YellinNavigationViewController.m */; };
+		FB201AE218904D7F00059C5D /* YellinUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AE118904D7F00059C5D /* YellinUtility.m */; };
+		FB201AE518904E6800059C5D /* YellinMakeMouthSoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AE418904E6800059C5D /* YellinMakeMouthSoundViewController.m */; };
+		FB201AE818904E7900059C5D /* YellinMakeMouthSoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AE718904E7900059C5D /* YellinMakeMouthSoundView.m */; };
+		FB201AEC18905F7700059C5D /* YellinSoundNeedsMouthCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AEB18905F7700059C5D /* YellinSoundNeedsMouthCell.m */; };
+		FB201AEF18905F9100059C5D /* YellinSoundRespondedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AEE18905F9100059C5D /* YellinSoundRespondedCell.m */; };
+		FB201AF218908DFE00059C5D /* YellinRespondToChirpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AF118908DFE00059C5D /* YellinRespondToChirpViewController.m */; };
+		FB201AF518908F3F00059C5D /* YellinRespondToChirpView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AF418908F3F00059C5D /* YellinRespondToChirpView.m */; };
+		FB201AFA1890A64500059C5D /* YellinAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AF91890A64500059C5D /* YellinAudioRecorder.m */; };
+		FB201AFD1890C01E00059C5D /* YellinAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AFC1890C01E00059C5D /* YellinAudioPlayer.m */; };
+		FB4C7BF318D7EF990080BD27 /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4C7BF118D7EF990080BD27 /* x.png */; };
+		FB4C7BF418D7EF990080BD27 /* x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4C7BF218D7EF990080BD27 /* x@2x.png */; };
+		FB9AD07718E376A800C47F2C /* YellinAudioPlayerCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9AD07618E376A800C47F2C /* YellinAudioPlayerCache.m */; };
+		FBACE32A18D677D400BDD354 /* ear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBACE32518D677D400BDD354 /* ear@2x.png */; };
+		FBACE32B18D677D400BDD354 /* mic.png in Resources */ = {isa = PBXBuildFile; fileRef = FBACE32618D677D400BDD354 /* mic.png */; };
+		FBACE32C18D677D400BDD354 /* mic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBACE32718D677D400BDD354 /* mic@2x.png */; };
+		FBACE32D18D677D400BDD354 /* question.png in Resources */ = {isa = PBXBuildFile; fileRef = FBACE32818D677D400BDD354 /* question.png */; };
+		FBACE32E18D677D400BDD354 /* question@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBACE32918D677D400BDD354 /* question@2x.png */; };
+		FBACE33118D677F100BDD354 /* ear.png in Resources */ = {isa = PBXBuildFile; fileRef = FBACE33018D677F100BDD354 /* ear.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB201A87188E301200059C5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB201A56188E301200059C5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB201A5D188E301200059C5D;
+			remoteInfo = yellin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B5A389F318E11CFF00819B62 /* App_Store.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = App_Store.png; sourceTree = "<group>"; };
+		B5A389F418E11CFF00819B62 /* App_Store@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App_Store@2x.png"; sourceTree = "<group>"; };
+		B5A389F518E11CFF00819B62 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		B5A389F618E11CFF00819B62 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		B5A389F718E11CFF00819B62 /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
+		B5A389F818E11CFF00819B62 /* Settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings@2x.png"; sourceTree = "<group>"; };
+		B5A389F918E11CFF00819B62 /* Spotlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spotlight.png; sourceTree = "<group>"; };
+		B5A389FA18E11CFF00819B62 /* Spotlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spotlight@2x.png"; sourceTree = "<group>"; };
+		B5A38A0318E11D2F00819B62 /* launch_image_short.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch_image_short.png; sourceTree = "<group>"; };
+		B5A38A0418E11D2F00819B62 /* launch_image_tall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch_image_tall.png; sourceTree = "<group>"; };
+		FB1F7F6118931B59007B00DA /* YellinAudioTimelineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinAudioTimelineView.h; sourceTree = "<group>"; };
+		FB1F7F6218931B59007B00DA /* YellinAudioTimelineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinAudioTimelineView.m; sourceTree = "<group>"; };
+		FB1F7F671895AAB8007B00DA /* YellinAboutTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinAboutTabViewController.h; sourceTree = "<group>"; };
+		FB1F7F681895AAB8007B00DA /* YellinAboutTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinAboutTabViewController.m; sourceTree = "<group>"; };
+		FB201A5E188E301200059C5D /* yellin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yellin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB201A61188E301200059C5D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB201A63188E301200059C5D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FB201A65188E301200059C5D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB201A69188E301200059C5D /* yellin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "yellin-Info.plist"; sourceTree = "<group>"; };
+		FB201A6B188E301200059C5D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB201A6D188E301200059C5D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB201A6F188E301200059C5D /* yellin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "yellin-Prefix.pch"; sourceTree = "<group>"; };
+		FB201A70188E301200059C5D /* YellinAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YellinAppDelegate.h; sourceTree = "<group>"; };
+		FB201A71188E301200059C5D /* YellinAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YellinAppDelegate.m; sourceTree = "<group>"; };
+		FB201A74188E301200059C5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB201A7C188E301200059C5D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FB201A82188E301200059C5D /* yellinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yellinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB201A83188E301200059C5D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FB201A8B188E301200059C5D /* yellinTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "yellinTests-Info.plist"; sourceTree = "<group>"; };
+		FB201A8D188E301200059C5D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB201A8F188E301200059C5D /* yellinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = yellinTests.m; sourceTree = "<group>"; };
+		FB201A9C188E37E400059C5D /* YellinMakeYellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinMakeYellViewController.h; sourceTree = "<group>"; };
+		FB201A9D188E37E400059C5D /* YellinMakeYellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinMakeYellViewController.m; sourceTree = "<group>"; };
+		FB201A9F188E37FE00059C5D /* YellinMouthSoundsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinMouthSoundsViewController.h; sourceTree = "<group>"; };
+		FB201AA0188E37FE00059C5D /* YellinMouthSoundsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinMouthSoundsViewController.m; sourceTree = "<group>"; };
+		FB201AA4188E412F00059C5D /* YellinMakeYellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinMakeYellView.h; sourceTree = "<group>"; };
+		FB201AA5188E412F00059C5D /* YellinMakeYellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinMakeYellView.m; sourceTree = "<group>"; };
+		FB201AA7188E414300059C5D /* YellinMouthYellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinMouthYellView.h; sourceTree = "<group>"; };
+		FB201AA8188E414300059C5D /* YellinMouthYellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinMouthYellView.m; sourceTree = "<group>"; };
+		FB201ABC188F4B7A00059C5D /* YellinConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YellinConstants.h; path = ../YellinConstants.h; sourceTree = "<group>"; };
+		FB201ABD188F4B7A00059C5D /* YellinConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YellinConstants.m; path = ../YellinConstants.m; sourceTree = "<group>"; };
+		FB201AC1188F7E8400059C5D /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		FB201AC3188F7F9C00059C5D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		FB201AC5188F81CD00059C5D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		FB201AC7188F81D400059C5D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		FB201AC9188F81E100059C5D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FB201ACB188F81E900059C5D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		FB201ACD188F81F100059C5D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		FB201ACF188F81F900059C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FB201AD1188F81FF00059C5D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FB201AD3188F820500059C5D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		FB201AD5188F820E00059C5D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FB201AD7188F857300059C5D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		FB201AD8188F857300059C5D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		FB201ADA1890490D00059C5D /* YellinMasterTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinMasterTabBarController.h; sourceTree = "<group>"; };
+		FB201ADB1890490D00059C5D /* YellinMasterTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinMasterTabBarController.m; sourceTree = "<group>"; };
+		FB201ADD18904A0D00059C5D /* YellinNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinNavigationViewController.h; sourceTree = "<group>"; };
+		FB201ADE18904A0D00059C5D /* YellinNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinNavigationViewController.m; sourceTree = "<group>"; };
+		FB201AE018904D7F00059C5D /* YellinUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinUtility.h; sourceTree = "<group>"; };
+		FB201AE118904D7F00059C5D /* YellinUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinUtility.m; sourceTree = "<group>"; };
+		FB201AE318904E6800059C5D /* YellinMakeMouthSoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinMakeMouthSoundViewController.h; sourceTree = "<group>"; };
+		FB201AE418904E6800059C5D /* YellinMakeMouthSoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinMakeMouthSoundViewController.m; sourceTree = "<group>"; };
+		FB201AE618904E7900059C5D /* YellinMakeMouthSoundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinMakeMouthSoundView.h; sourceTree = "<group>"; };
+		FB201AE718904E7900059C5D /* YellinMakeMouthSoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinMakeMouthSoundView.m; sourceTree = "<group>"; };
+		FB201AEA18905F7700059C5D /* YellinSoundNeedsMouthCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinSoundNeedsMouthCell.h; sourceTree = "<group>"; };
+		FB201AEB18905F7700059C5D /* YellinSoundNeedsMouthCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinSoundNeedsMouthCell.m; sourceTree = "<group>"; };
+		FB201AED18905F9100059C5D /* YellinSoundRespondedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinSoundRespondedCell.h; sourceTree = "<group>"; };
+		FB201AEE18905F9100059C5D /* YellinSoundRespondedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinSoundRespondedCell.m; sourceTree = "<group>"; };
+		FB201AF018908DFE00059C5D /* YellinRespondToChirpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinRespondToChirpViewController.h; sourceTree = "<group>"; };
+		FB201AF118908DFE00059C5D /* YellinRespondToChirpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinRespondToChirpViewController.m; sourceTree = "<group>"; };
+		FB201AF318908F3F00059C5D /* YellinRespondToChirpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinRespondToChirpView.h; sourceTree = "<group>"; };
+		FB201AF418908F3F00059C5D /* YellinRespondToChirpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinRespondToChirpView.m; sourceTree = "<group>"; };
+		FB201AF81890A64500059C5D /* YellinAudioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinAudioRecorder.h; sourceTree = "<group>"; };
+		FB201AF91890A64500059C5D /* YellinAudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinAudioRecorder.m; sourceTree = "<group>"; };
+		FB201AFB1890C01E00059C5D /* YellinAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinAudioPlayer.h; sourceTree = "<group>"; };
+		FB201AFC1890C01E00059C5D /* YellinAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinAudioPlayer.m; sourceTree = "<group>"; };
+		FB4C7BF118D7EF990080BD27 /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = x.png; path = images/x.png; sourceTree = "<group>"; };
+		FB4C7BF218D7EF990080BD27 /* x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "x@2x.png"; path = "images/x@2x.png"; sourceTree = "<group>"; };
+		FB9AD07518E376A800C47F2C /* YellinAudioPlayerCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellinAudioPlayerCache.h; sourceTree = "<group>"; };
+		FB9AD07618E376A800C47F2C /* YellinAudioPlayerCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellinAudioPlayerCache.m; sourceTree = "<group>"; };
+		FBACE32518D677D400BDD354 /* ear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ear@2x.png"; path = "images/ear@2x.png"; sourceTree = "<group>"; };
+		FBACE32618D677D400BDD354 /* mic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mic.png; path = images/mic.png; sourceTree = "<group>"; };
+		FBACE32718D677D400BDD354 /* mic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mic@2x.png"; path = "images/mic@2x.png"; sourceTree = "<group>"; };
+		FBACE32818D677D400BDD354 /* question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = question.png; path = images/question.png; sourceTree = "<group>"; };
+		FBACE32918D677D400BDD354 /* question@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "question@2x.png"; path = "images/question@2x.png"; sourceTree = "<group>"; };
+		FBACE33018D677F100BDD354 /* ear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ear.png; path = images/ear.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB201A5B188E301200059C5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB201AD6188F820E00059C5D /* SystemConfiguration.framework in Frameworks */,
+				FB201AD4188F820500059C5D /* StoreKit.framework in Frameworks */,
+				FB201AD2188F81FF00059C5D /* Security.framework in Frameworks */,
+				FB201AD0188F81F900059C5D /* QuartzCore.framework in Frameworks */,
+				FB201ACE188F81F100059C5D /* MobileCoreServices.framework in Frameworks */,
+				FB201ACC188F81E900059C5D /* libz.dylib in Frameworks */,
+				FB201ACA188F81E100059C5D /* CoreLocation.framework in Frameworks */,
+				FB201A64188E301200059C5D /* CoreGraphics.framework in Frameworks */,
+				FB201AC8188F81D400059C5D /* CFNetwork.framework in Frameworks */,
+				FB201AC6188F81CD00059C5D /* AudioToolbox.framework in Frameworks */,
+				FB201AC2188F7E8400059C5D /* FacebookSDK.framework in Frameworks */,
+				FB201A66188E301200059C5D /* UIKit.framework in Frameworks */,
+				FB201A62188E301200059C5D /* Foundation.framework in Frameworks */,
+				FB201AC4188F7F9C00059C5D /* Parse.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB201A7F188E301200059C5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB201A84188E301200059C5D /* XCTest.framework in Frameworks */,
+				FB201A86188E301200059C5D /* UIKit.framework in Frameworks */,
+				FB201A85188E301200059C5D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB201A55188E301200059C5D = {
+			isa = PBXGroup;
+			children = (
+				FB201A67188E301200059C5D /* yellin */,
+				FB201A89188E301200059C5D /* yellinTests */,
+				FB201A60188E301200059C5D /* Frameworks */,
+				FB201A5F188E301200059C5D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB201A5F188E301200059C5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB201A5E188E301200059C5D /* yellin.app */,
+				FB201A82188E301200059C5D /* yellinTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB201A60188E301200059C5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB201AD5188F820E00059C5D /* SystemConfiguration.framework */,
+				FB201AD3188F820500059C5D /* StoreKit.framework */,
+				FB201AD1188F81FF00059C5D /* Security.framework */,
+				FB201ACF188F81F900059C5D /* QuartzCore.framework */,
+				FB201ACD188F81F100059C5D /* MobileCoreServices.framework */,
+				FB201ACB188F81E900059C5D /* libz.dylib */,
+				FB201AC9188F81E100059C5D /* CoreLocation.framework */,
+				FB201AC7188F81D400059C5D /* CFNetwork.framework */,
+				FB201AC5188F81CD00059C5D /* AudioToolbox.framework */,
+				FB201AC3188F7F9C00059C5D /* Parse.framework */,
+				FB201AC1188F7E8400059C5D /* FacebookSDK.framework */,
+				FB201A61188E301200059C5D /* Foundation.framework */,
+				FB201A63188E301200059C5D /* CoreGraphics.framework */,
+				FB201A65188E301200059C5D /* UIKit.framework */,
+				FB201A83188E301200059C5D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB201A67188E301200059C5D /* yellin */ = {
+			isa = PBXGroup;
+			children = (
+				FBACE32F18D677E100BDD354 /* images */,
+				FB201ABC188F4B7A00059C5D /* YellinConstants.h */,
+				FB201ABD188F4B7A00059C5D /* YellinConstants.m */,
+				FB201AE018904D7F00059C5D /* YellinUtility.h */,
+				FB201AE118904D7F00059C5D /* YellinUtility.m */,
+				FB201A70188E301200059C5D /* YellinAppDelegate.h */,
+				FB201A71188E301200059C5D /* YellinAppDelegate.m */,
+				FB9AD07518E376A800C47F2C /* YellinAudioPlayerCache.h */,
+				FB9AD07618E376A800C47F2C /* YellinAudioPlayerCache.m */,
+				FB201AF81890A64500059C5D /* YellinAudioRecorder.h */,
+				FB201AF91890A64500059C5D /* YellinAudioRecorder.m */,
+				FB201AFB1890C01E00059C5D /* YellinAudioPlayer.h */,
+				FB201AFC1890C01E00059C5D /* YellinAudioPlayer.m */,
+				FB201A73188E301200059C5D /* Main.storyboard */,
+				FB201A7C188E301200059C5D /* Images.xcassets */,
+				FB201A68188E301200059C5D /* Supporting Files */,
+				FB201AF718908F7300059C5D /* Controllers */,
+				FB201AF618908F5000059C5D /* Views */,
+			);
+			path = yellin;
+			sourceTree = "<group>";
+		};
+		FB201A68188E301200059C5D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB201A69188E301200059C5D /* yellin-Info.plist */,
+				FB201A6A188E301200059C5D /* InfoPlist.strings */,
+				FB201A6D188E301200059C5D /* main.m */,
+				FB201A6F188E301200059C5D /* yellin-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FB201A89188E301200059C5D /* yellinTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB201A8F188E301200059C5D /* yellinTests.m */,
+				FB201A8A188E301200059C5D /* Supporting Files */,
+			);
+			path = yellinTests;
+			sourceTree = "<group>";
+		};
+		FB201A8A188E301200059C5D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB201A8B188E301200059C5D /* yellinTests-Info.plist */,
+				FB201A8C188E301200059C5D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FB201AA2188E410100059C5D /* TabControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB201A9C188E37E400059C5D /* YellinMakeYellViewController.h */,
+				FB201A9D188E37E400059C5D /* YellinMakeYellViewController.m */,
+				FB201A9F188E37FE00059C5D /* YellinMouthSoundsViewController.h */,
+				FB201AA0188E37FE00059C5D /* YellinMouthSoundsViewController.m */,
+				FB201AE318904E6800059C5D /* YellinMakeMouthSoundViewController.h */,
+				FB201AE418904E6800059C5D /* YellinMakeMouthSoundViewController.m */,
+				FB1F7F671895AAB8007B00DA /* YellinAboutTabViewController.h */,
+				FB1F7F681895AAB8007B00DA /* YellinAboutTabViewController.m */,
+			);
+			name = TabControllers;
+			sourceTree = "<group>";
+		};
+		FB201AA3188E411200059C5D /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				FB201AA4188E412F00059C5D /* YellinMakeYellView.h */,
+				FB201AA5188E412F00059C5D /* YellinMakeYellView.m */,
+				FB201AA7188E414300059C5D /* YellinMouthYellView.h */,
+				FB201AA8188E414300059C5D /* YellinMouthYellView.m */,
+				FB201AE618904E7900059C5D /* YellinMakeMouthSoundView.h */,
+				FB201AE718904E7900059C5D /* YellinMakeMouthSoundView.m */,
+			);
+			name = TabViews;
+			sourceTree = "<group>";
+		};
+		FB201AE9189050C200059C5D /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				FB201AEA18905F7700059C5D /* YellinSoundNeedsMouthCell.h */,
+				FB201AEB18905F7700059C5D /* YellinSoundNeedsMouthCell.m */,
+				FB201AED18905F9100059C5D /* YellinSoundRespondedCell.h */,
+				FB201AEE18905F9100059C5D /* YellinSoundRespondedCell.m */,
+			);
+			name = TableCells;
+			sourceTree = "<group>";
+		};
+		FB201AF618908F5000059C5D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB201AF318908F3F00059C5D /* YellinRespondToChirpView.h */,
+				FB201AF418908F3F00059C5D /* YellinRespondToChirpView.m */,
+				FB1F7F6118931B59007B00DA /* YellinAudioTimelineView.h */,
+				FB1F7F6218931B59007B00DA /* YellinAudioTimelineView.m */,
+				FB201AE9189050C200059C5D /* TableCells */,
+				FB201AA3188E411200059C5D /* TabViews */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		FB201AF718908F7300059C5D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB201AD7188F857300059C5D /* LoginViewController.h */,
+				FB201AD8188F857300059C5D /* LoginViewController.m */,
+				FB201ADA1890490D00059C5D /* YellinMasterTabBarController.h */,
+				FB201ADB1890490D00059C5D /* YellinMasterTabBarController.m */,
+				FB201ADD18904A0D00059C5D /* YellinNavigationViewController.h */,
+				FB201ADE18904A0D00059C5D /* YellinNavigationViewController.m */,
+				FB201AF018908DFE00059C5D /* YellinRespondToChirpViewController.h */,
+				FB201AF118908DFE00059C5D /* YellinRespondToChirpViewController.m */,
+				FB201AA2188E410100059C5D /* TabControllers */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		FBACE32F18D677E100BDD354 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				FB4C7BF118D7EF990080BD27 /* x.png */,
+				FB4C7BF218D7EF990080BD27 /* x@2x.png */,
+				B5A38A0318E11D2F00819B62 /* launch_image_short.png */,
+				B5A38A0418E11D2F00819B62 /* launch_image_tall.png */,
+				FBACE33018D677F100BDD354 /* ear.png */,
+				FBACE32518D677D400BDD354 /* ear@2x.png */,
+				FBACE32618D677D400BDD354 /* mic.png */,
+				B5A389F318E11CFF00819B62 /* App_Store.png */,
+				B5A389F418E11CFF00819B62 /* App_Store@2x.png */,
+				B5A389F518E11CFF00819B62 /* Icon.png */,
+				B5A389F618E11CFF00819B62 /* Icon@2x.png */,
+				B5A389F718E11CFF00819B62 /* Settings.png */,
+				B5A389F818E11CFF00819B62 /* Settings@2x.png */,
+				B5A389F918E11CFF00819B62 /* Spotlight.png */,
+				B5A389FA18E11CFF00819B62 /* Spotlight@2x.png */,
+				FBACE32718D677D400BDD354 /* mic@2x.png */,
+				FBACE32818D677D400BDD354 /* question.png */,
+				FBACE32918D677D400BDD354 /* question@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB201A5D188E301200059C5D /* yellin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB201A93188E301200059C5D /* Build configuration list for PBXNativeTarget "yellin" */;
+			buildPhases = (
+				FB201A5A188E301200059C5D /* Sources */,
+				FB201A5B188E301200059C5D /* Frameworks */,
+				FB201A5C188E301200059C5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = yellin;
+			productName = yellin;
+			productReference = FB201A5E188E301200059C5D /* yellin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB201A81188E301200059C5D /* yellinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB201A96188E301200059C5D /* Build configuration list for PBXNativeTarget "yellinTests" */;
+			buildPhases = (
+				FB201A7E188E301200059C5D /* Sources */,
+				FB201A7F188E301200059C5D /* Frameworks */,
+				FB201A80188E301200059C5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB201A88188E301200059C5D /* PBXTargetDependency */,
+			);
+			name = yellinTests;
+			productName = yellinTests;
+			productReference = FB201A82188E301200059C5D /* yellinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB201A56188E301200059C5D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Yellin;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Kevin Roark";
+				TargetAttributes = {
+					FB201A81188E301200059C5D = {
+						TestTargetID = FB201A5D188E301200059C5D;
+					};
+				};
+			};
+			buildConfigurationList = FB201A59188E301200059C5D /* Build configuration list for PBXProject "yellin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB201A55188E301200059C5D;
+			productRefGroup = FB201A5F188E301200059C5D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB201A5D188E301200059C5D /* yellin */,
+				FB201A81188E301200059C5D /* yellinTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB201A5C188E301200059C5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5A389FF18E11CFF00819B62 /* Settings.png in Resources */,
+				B5A38A0518E11D2F00819B62 /* launch_image_short.png in Resources */,
+				B5A389FC18E11CFF00819B62 /* App_Store@2x.png in Resources */,
+				FBACE33118D677F100BDD354 /* ear.png in Resources */,
+				FB201A7D188E301200059C5D /* Images.xcassets in Resources */,
+				FB4C7BF418D7EF990080BD27 /* x@2x.png in Resources */,
+				B5A389FE18E11CFF00819B62 /* Icon@2x.png in Resources */,
+				B5A38A0118E11CFF00819B62 /* Spotlight.png in Resources */,
+				FB4C7BF318D7EF990080BD27 /* x.png in Resources */,
+				B5A38A0018E11CFF00819B62 /* Settings@2x.png in Resources */,
+				FBACE32B18D677D400BDD354 /* mic.png in Resources */,
+				FBACE32D18D677D400BDD354 /* question.png in Resources */,
+				FB201A6C188E301200059C5D /* InfoPlist.strings in Resources */,
+				FBACE32E18D677D400BDD354 /* question@2x.png in Resources */,
+				FB201A75188E301200059C5D /* Main.storyboard in Resources */,
+				B5A389FB18E11CFF00819B62 /* App_Store.png in Resources */,
+				FBACE32C18D677D400BDD354 /* mic@2x.png in Resources */,
+				B5A38A0618E11D2F00819B62 /* launch_image_tall.png in Resources */,
+				B5A389FD18E11CFF00819B62 /* Icon.png in Resources */,
+				FBACE32A18D677D400BDD354 /* ear@2x.png in Resources */,
+				B5A38A0218E11CFF00819B62 /* Spotlight@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB201A80188E301200059C5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB201A8E188E301200059C5D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB201A5A188E301200059C5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB201AEC18905F7700059C5D /* YellinSoundNeedsMouthCell.m in Sources */,
+				FB1F7F6318931B59007B00DA /* YellinAudioTimelineView.m in Sources */,
+				FB201AFA1890A64500059C5D /* YellinAudioRecorder.m in Sources */,
+				FB201AD9188F857300059C5D /* LoginViewController.m in Sources */,
+				FB201A6E188E301200059C5D /* main.m in Sources */,
+				FB201AE218904D7F00059C5D /* YellinUtility.m in Sources */,
+				FB201ABE188F4B7A00059C5D /* YellinConstants.m in Sources */,
+				FB201AA1188E37FE00059C5D /* YellinMouthSoundsViewController.m in Sources */,
+				FB201AA6188E412F00059C5D /* YellinMakeYellView.m in Sources */,
+				FB201A9E188E37E400059C5D /* YellinMakeYellViewController.m in Sources */,
+				FB201ADC1890490D00059C5D /* YellinMasterTabBarController.m in Sources */,
+				FB201A72188E301200059C5D /* YellinAppDelegate.m in Sources */,
+				FB201ADF18904A0D00059C5D /* YellinNavigationViewController.m in Sources */,
+				FB201AE818904E7900059C5D /* YellinMakeMouthSoundView.m in Sources */,
+				FB201AF518908F3F00059C5D /* YellinRespondToChirpView.m in Sources */,
+				FB9AD07718E376A800C47F2C /* YellinAudioPlayerCache.m in Sources */,
+				FB201AEF18905F9100059C5D /* YellinSoundRespondedCell.m in Sources */,
+				FB201AA9188E414300059C5D /* YellinMouthYellView.m in Sources */,
+				FB201AE518904E6800059C5D /* YellinMakeMouthSoundViewController.m in Sources */,
+				FB201AF218908DFE00059C5D /* YellinRespondToChirpViewController.m in Sources */,
+				FB201AFD1890C01E00059C5D /* YellinAudioPlayer.m in Sources */,
+				FB1F7F691895AAB8007B00DA /* YellinAboutTabViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB201A7E188E301200059C5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB201A90188E301200059C5D /* yellinTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB201A88188E301200059C5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB201A5D188E301200059C5D /* yellin */;
+			targetProxy = FB201A87188E301200059C5D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB201A6A188E301200059C5D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB201A6B188E301200059C5D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FB201A73188E301200059C5D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB201A74188E301200059C5D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FB201A8C188E301200059C5D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB201A8D188E301200059C5D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB201A91188E301200059C5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FB201A92188E301200059C5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB201A94188E301200059C5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Miller's Fantasy (DHJBRYP9PM)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Miller's Fantasy (DHJBRYP9PM)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/kevinroark/Documents/FacebookSDK,
+					/Users/kevinroark/code/ios/yellin/yellin,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "yellin/yellin-Prefix.pch";
+				INFOPLIST_FILE = "yellin/yellin-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4C5C9FBF-67F5-478F-AD55-32CC94C0DA02";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FB201A95188E301200059C5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Miller's Fantasy (DHJBRYP9PM)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/kevinroark/Documents/FacebookSDK,
+					/Users/kevinroark/code/ios/yellin/yellin,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "yellin/yellin-Prefix.pch";
+				INFOPLIST_FILE = "yellin/yellin-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4C5C9FBF-67F5-478F-AD55-32CC94C0DA02";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FB201A97188E301200059C5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/yellin.app/yellin";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "yellin/yellin-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "yellinTests/yellinTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FB201A98188E301200059C5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/yellin.app/yellin";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "yellin/yellin-Prefix.pch";
+				INFOPLIST_FILE = "yellinTests/yellinTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB201A59188E301200059C5D /* Build configuration list for PBXProject "yellin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB201A91188E301200059C5D /* Debug */,
+				FB201A92188E301200059C5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB201A93188E301200059C5D /* Build configuration list for PBXNativeTarget "yellin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB201A94188E301200059C5D /* Debug */,
+				FB201A95188E301200059C5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB201A96188E301200059C5D /* Build configuration list for PBXNativeTarget "yellinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB201A97188E301200059C5D /* Debug */,
+				FB201A98188E301200059C5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB201A56188E301200059C5D /* Project object */;
+}
